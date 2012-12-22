@@ -7,4 +7,11 @@ COMPILATION INSTRUCTIONS
 2. FOR BIG INTEGER MANIPULATION(cd : project root)
     type cc sample/big_integer_comparator.c lib/big_integer_impl.o lib/big_integer.o -I./include -o big_integer_comparator
 
-LLLY for Decoder
+
+*****NEW MAKEFILE COMPILATION SUPPORT ADDED*******
+
+type make to compile all files
+
+type make encoder for compiling encoder
+type make decoder for compiling decoder
+type make big_integer_comparator to compile big integer comparator

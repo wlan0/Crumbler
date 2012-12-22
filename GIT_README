@@ -1,0 +1,12 @@
+reate a new repository on the command line
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add masterx https://github.com/sidharthamani/Android-Crumbler.git
+git push -u msaterx master
+Push an existing repository from the command line
+
+git remote add masterx https://github.com/sidharthamani/Android-Crumbler.git
+git push -u masterx master
