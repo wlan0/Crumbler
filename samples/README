@@ -1,0 +1,10 @@
+COMPILATION INSTRUCTIONS
+--------------------------
+
+1. Type the following command from the project root to compile
+    cc samples/simple_prefix_encoder.c lib/simple_prefix.o lib/simple_prefix_impl.o -I./include -o simple_prefix_encoder
+
+2. FOR BIG INTEGER MANIPULATION(cd : project root)
+    type cc sample/big_integer_comparator.c lib/big_integer_impl.o lib/big_integer.o -I./include -o big_integer_comparator
+
+LLLY for Decoder

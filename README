@@ -1,0 +1,26 @@
+COMPILATION INSTRUCTIONS :
+---------------------------
+
+With the project root(the directory in which this file has been placed) as the current directory, type
+
+1. make
+
+This will create the following libraries in the lib/ folder
+1. simple_prefix.o
+2. simple_prefix_impl.o
+
+See samples to use this in your programs
+
+USAGE INSTRUCTIONS :
+---------------------
+
+When you give an input file to the encoder, make sure it has only lower case alphabets and white spaces, nothing more
+
+Things that the input file should not contain :
+1. UPPER CASE ALPHABETS
+2. $ym80L$
+3. Any other wild character
+
+make sure file size is less than 50 characters
+
+VIOLATING ANY RULES WILL LEAD TO UNDEFINED BEHAVIOR
