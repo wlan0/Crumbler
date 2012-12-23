@@ -1,8 +1,5 @@
-Android-Crumbler v0.1:
-++++++++++++++++++++++
-======================
-----------------------
-**********************
+Android-Crumbler v0.1 :
+=======================
 
 This is the C back end that will be called from the android application via a native call. This is being done with
 performance as the most important Quality. Performance in terms of execution time, the algorithms etc. Performance
@@ -37,10 +34,18 @@ make sure file size is less than 50 characters
 
 VIOLATING ANY RULES WILL LEAD TO UNDEFINED BEHAVIOR
 
-NEW FEATURES :
-==============
+DETAILED INSTRUCTIONS AVAILABLE IN DOCS
 
-1. Big Integer Comparison and addition support added
+NEW FEATURES ADDED IN THIS VERSION :
+====================================
+
+1. Big Integer Comparison and addition support added(only for positive Big Ints)
+2. Doxygen Documentation added for src/simple_prefix_impl.c
+
+NEXT FEATURE :
+==============
+1. Small Collections Library - with linked lists, binary trees, stacks, queues, hashmaps, sorting functions, counting
+functions
 
 FUTURE :
 ========

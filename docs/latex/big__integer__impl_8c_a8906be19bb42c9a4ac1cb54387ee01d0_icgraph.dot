@@ -1,0 +1,15 @@
+digraph "long_long_to_char"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="long_long_to_char",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="init_big_integer_from_long",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer__impl_8c.html#a2ea84ff52859d3887e65b120068c0158"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="init_Big_Int_from_long",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer_8c.html#a0c2885b6802e073ab77344b7323b4880"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="init_big_integer_from_int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer__impl_8c.html#a4c0bcb12462f0ee91ab4e2a50648959d"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="init_Big_Int_from_int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer_8c.html#a70280d3fbe2128f5bd1801dddcb781c1"];
+}

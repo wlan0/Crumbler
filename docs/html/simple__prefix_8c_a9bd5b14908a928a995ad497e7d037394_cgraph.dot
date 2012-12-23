@@ -1,0 +1,19 @@
+digraph "init"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="x_encode_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simple__prefix_8c.html#ac55c02996682de17f87b5c1116bb9944"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="simple_prefix_encode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simple__prefix__impl_8h.html#ab5bd0496da802122958e3af1482d1a6e"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="x_decode_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simple__prefix_8c.html#a1c9ef3bc94f0f14191b5956bb4040867"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="init_simple_prefix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simple__prefix__impl_8h.html#af8da3d9dd76b4948b2233ed801729904",tooltip="allocate memory for a new simple_prefix tree   Precondition: The structure should not have already be..."];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="construct_simple_prefix_tree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simple__prefix__impl_8h.html#a6657448982edc6daa25abcb440fca1d8",tooltip="construct a naive simple_prefix tree for a set of characters specified by input_msgs    Precondition:..."];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="simple_prefix_decode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simple__prefix__impl_8h.html#a40ee92d324331ee4ca644e67d3697f58"];
+}

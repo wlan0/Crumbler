@@ -1,0 +1,23 @@
+digraph "init_Big_Int_from_long"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="init_Big_Int_from_long",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="init_big_integer_from_long",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer__impl_8h.html#a2ea84ff52859d3887e65b120068c0158"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="init_big_integer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer__impl_8h.html#a12a72eb0245b2fbd9cce5dacaf877a72"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="long_long_to_char",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer__impl_8c.html#a8906be19bb42c9a4ac1cb54387ee01d0"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="reverse_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer__impl_8c.html#a8242235fbc1f6d24b8de1dda59b5c5cf"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="get_integer_as_char",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer_8c.html#ac2526efa6d8c1b088b805ceb7847fa4b"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="get_sign_as_int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer_8c.html#a837651f373a264834cfb80be16d0ab32"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="set_integer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer_8c.html#a83fca4473e21f926f011b283b0cc7bc8"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="set_sign",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$big__integer_8c.html#a1e8a8230d017886a82eb0a884f6fe12c"];
+}

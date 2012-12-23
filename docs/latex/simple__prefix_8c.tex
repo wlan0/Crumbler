@@ -1,0 +1,89 @@
+\hypertarget{simple__prefix_8c}{\section{/\-Users/sidharthamani/huffman\-\_\-coder/src/simple\-\_\-prefix.c File Reference}
+\label{simple__prefix_8c}\index{/\-Users/sidharthamani/huffman\-\_\-coder/src/simple\-\_\-prefix.\-c@{/\-Users/sidharthamani/huffman\-\_\-coder/src/simple\-\_\-prefix.\-c}}
+}
+{\ttfamily \#include \char`\"{}simple\-\_\-prefix.\-h\char`\"{}}\\*
+Include dependency graph for simple\-\_\-prefix.\-c\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{simple__prefix_8c_ac55c02996682de17f87b5c1116bb9944}{x\-\_\-encode\-\_\-file} (char $\ast$input\-\_\-file\-\_\-name, char $\ast$output\-\_\-file\-\_\-name)
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{simple__prefix_8c_a1c9ef3bc94f0f14191b5956bb4040867}{x\-\_\-decode\-\_\-file} (char $\ast$input\-\_\-file\-\_\-name, char $\ast$output\-\_\-file\-\_\-name)
+\item 
+\hyperlink{structsimple__prefix}{simple\-\_\-prefix} $\ast$ \hyperlink{simple__prefix_8c_a9bd5b14908a928a995ad497e7d037394}{init} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{simple__prefix_8c_a9bd5b14908a928a995ad497e7d037394}{\index{simple\-\_\-prefix.\-c@{simple\-\_\-prefix.\-c}!init@{init}}
+\index{init@{init}!simple_prefix.c@{simple\-\_\-prefix.\-c}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf simple\-\_\-prefix}$\ast$ init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{simple__prefix_8c_a9bd5b14908a928a995ad497e7d037394}
+
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{struct }\hyperlink{structsimple__prefix}{simple\_prefix} *x\_simple\_prefix = (\textcolor{keyword}{struct }\hyperlink{structsimple__prefix}{simple\_prefix}
+      *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structsimple__prefix}{simple\_prefix}));
+    x\_simple\_prefix->\hyperlink{structsimple__prefix_a73d0a239981b130553964b3839c20bdf}{encode\_file} = \hyperlink{simple__prefix_8c_ac55c02996682de17f87b5c1116bb9944}{x\_encode\_file};
+    x\_simple\_prefix->\hyperlink{structsimple__prefix_a58708e15f01f3be37e12d3194e953b41}{decode\_file} = \hyperlink{simple__prefix_8c_a1c9ef3bc94f0f14191b5956bb4040867}{x\_decode\_file};
+    \textcolor{keywordflow}{return} x\_simple\_prefix;
+\}\end{DoxyCode}
+\hypertarget{simple__prefix_8c_a1c9ef3bc94f0f14191b5956bb4040867}{\index{simple\-\_\-prefix.\-c@{simple\-\_\-prefix.\-c}!x\-\_\-decode\-\_\-file@{x\-\_\-decode\-\_\-file}}
+\index{x\-\_\-decode\-\_\-file@{x\-\_\-decode\-\_\-file}!simple_prefix.c@{simple\-\_\-prefix.\-c}}
+\subsubsection[{x\-\_\-decode\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ x\-\_\-decode\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input\-\_\-file\-\_\-name, }
+\item[{char $\ast$}]{output\-\_\-file\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{simple__prefix_8c_a1c9ef3bc94f0f14191b5956bb4040867}
+
+\begin{DoxyCode}
+\{
+    FILE* input\_file = fopen(input\_file\_name,\textcolor{stringliteral}{"r"});
+    FILE *output\_file;
+    \textcolor{keywordtype}{char} *input\_string = (\textcolor{keywordtype}{char} *)malloc(1000);
+    \textcolor{keywordtype}{char} *output\_string;
+    \textcolor{keywordtype}{char} *input\_msgs = \hyperlink{simple__prefix__impl_8h_a94747a3d988297667d1f086be19a7f3d}{LOWER\_CASE\_ALPHABETS};
+    \textcolor{keyword}{struct }\hyperlink{structnode}{node} *root = \hyperlink{simple__prefix__impl_8h_af8da3d9dd76b4948b2233ed801729904}{init\_simple\_prefix}();
+    root = \hyperlink{simple__prefix__impl_8h_a2803bf8d5b507d080053c5795f1f2e8e}{construct\_simple\_prefix\_tree}(root,
+      input\_msgs,(\textcolor{keywordtype}{int})(strlen(input\_msgs)));
+    output\_file = fopen(output\_file\_name,\textcolor{stringliteral}{"w"});
+    \textcolor{keywordflow}{while}(fread(input\_string,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),1000,input\_file) != 0) 
+    \{
+        output\_string = \hyperlink{simple__prefix__impl_8h_a01c7baaef3398c045f127558eeef0b14}{simple\_prefix\_decode}(input\_string,
+      root,(\textcolor{keywordtype}{int})(strlen(input\_string)));
+        fwrite(output\_string,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),strlen(output\_string),output\_file);
+    \}
+    
+    \textcolor{keywordflow}{return} output\_file;
+\}
+\end{DoxyCode}
+\hypertarget{simple__prefix_8c_ac55c02996682de17f87b5c1116bb9944}{\index{simple\-\_\-prefix.\-c@{simple\-\_\-prefix.\-c}!x\-\_\-encode\-\_\-file@{x\-\_\-encode\-\_\-file}}
+\index{x\-\_\-encode\-\_\-file@{x\-\_\-encode\-\_\-file}!simple_prefix.c@{simple\-\_\-prefix.\-c}}
+\subsubsection[{x\-\_\-encode\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ x\-\_\-encode\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input\-\_\-file\-\_\-name, }
+\item[{char $\ast$}]{output\-\_\-file\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{simple__prefix_8c_ac55c02996682de17f87b5c1116bb9944}
+
+\begin{DoxyCode}
+\{
+    FILE* input\_file;
+    input\_file = fopen(input\_file\_name,\textcolor{stringliteral}{"r"});
+    FILE *output\_file;
+    \textcolor{keywordtype}{char} *input\_string = (\textcolor{keywordtype}{char} *)malloc(1000);
+    \textcolor{keywordtype}{char} *output\_string;
+    output\_file = fopen(output\_file\_name,\textcolor{stringliteral}{"w"});
+    \textcolor{keywordflow}{while}(fread(input\_string,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),1000,input\_file) != 0) 
+    \{
+        output\_string = \hyperlink{simple__prefix__impl_8h_a1d974ca63f3322d8a7d444c6ebbf6212}{simple\_prefix\_encode}(input\_string,
+      strlen(input\_string));
+        fwrite(output\_string,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),strlen(output\_string),output\_file);
+    \}
+    \textcolor{keywordflow}{return} output\_file;
+\}
+\end{DoxyCode}

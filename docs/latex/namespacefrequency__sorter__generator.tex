@@ -1,0 +1,55 @@
+\hypertarget{namespacefrequency__sorter__generator}{\section{frequency\-\_\-sorter\-\_\-generator Namespace Reference}
+\label{namespacefrequency__sorter__generator}\index{frequency\-\_\-sorter\-\_\-generator@{frequency\-\_\-sorter\-\_\-generator}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefrequency__sorter__generator_a4e5d2ba44e86d8d0b09d71d55d8caecb}{construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacefrequency__sorter__generator_af10bac427cf4eda50c22bfc352141c53}{file\-\_\-input} open('''frequencies''','''r''')
+\item 
+tuple \hyperlink{namespacefrequency__sorter__generator_a46abc2f5c61db548b0851ad685b29a49}{sorted\-\_\-frequencies\-\_\-tree} \hyperlink{namespacefrequency__sorter__generator_a4e5d2ba44e86d8d0b09d71d55d8caecb}{construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map}(file\-\_\-input.\-read())
+\item 
+tuple \hyperlink{namespacefrequency__sorter__generator_a25e9eabadb6d4f7c84eca83f978cfd4f}{file\-\_\-output} open('''frequency\-\_\-sorter.\-py''','''w''')
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacefrequency__sorter__generator_a4e5d2ba44e86d8d0b09d71d55d8caecb}{\index{frequency\-\_\-sorter\-\_\-generator@{frequency\-\_\-sorter\-\_\-generator}!construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map@{construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map}}
+\index{construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map@{construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map}!frequency_sorter_generator@{frequency\-\_\-sorter\-\_\-generator}}
+\subsubsection[{construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}def frequency\-\_\-sorter\-\_\-generator.\-construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{}]{file\-\_\-input}
+\end{DoxyParamCaption}
+)}}\label{namespacefrequency__sorter__generator_a4e5d2ba44e86d8d0b09d71d55d8caecb}
+
+\begin{DoxyCode}
+3 
+4 \textcolor{keyword}{def }\hyperlink{namespacefrequency__sorter__generator_a4e5d2ba44e86d8d0b09d71d55d8caecb}{construct\_sorted\_frequencies\_hash\_map}(
+      file\_input):
+5     file\_input = file\_input.split(\textcolor{stringliteral}{''','''})
+6     return\_value = \textcolor{stringliteral}{'''\{'''}
+7     \textcolor{keywordflow}{for} values \textcolor{keywordflow}{in} file\_input:
+8         return\_value += (\textcolor{stringliteral}{"""'"""} + values.split(\textcolor{stringliteral}{''':'''})[0] + \textcolor{stringliteral}{"""'"""} + \textcolor{stringliteral}{''' : 
+      '''} + values.split(\textcolor{stringliteral}{''':'''})[1])
+9         return\_value += (\textcolor{stringliteral}{''', '''})
+10     return\_value = return\_value[:-2]
+11     return\_value += (\textcolor{stringliteral}{'''\}'''})
+12     \textcolor{keywordflow}{return} return\_value
+
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacefrequency__sorter__generator_af10bac427cf4eda50c22bfc352141c53}{\index{frequency\-\_\-sorter\-\_\-generator@{frequency\-\_\-sorter\-\_\-generator}!file\-\_\-input@{file\-\_\-input}}
+\index{file\-\_\-input@{file\-\_\-input}!frequency_sorter_generator@{frequency\-\_\-sorter\-\_\-generator}}
+\subsubsection[{file\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}tuple file\-\_\-input open('''frequencies''','''r''')}}\label{namespacefrequency__sorter__generator_af10bac427cf4eda50c22bfc352141c53}
+\hypertarget{namespacefrequency__sorter__generator_a25e9eabadb6d4f7c84eca83f978cfd4f}{\index{frequency\-\_\-sorter\-\_\-generator@{frequency\-\_\-sorter\-\_\-generator}!file\-\_\-output@{file\-\_\-output}}
+\index{file\-\_\-output@{file\-\_\-output}!frequency_sorter_generator@{frequency\-\_\-sorter\-\_\-generator}}
+\subsubsection[{file\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}tuple file\-\_\-output open('''frequency\-\_\-sorter.\-py''','''w''')}}\label{namespacefrequency__sorter__generator_a25e9eabadb6d4f7c84eca83f978cfd4f}
+\hypertarget{namespacefrequency__sorter__generator_a46abc2f5c61db548b0851ad685b29a49}{\index{frequency\-\_\-sorter\-\_\-generator@{frequency\-\_\-sorter\-\_\-generator}!sorted\-\_\-frequencies\-\_\-tree@{sorted\-\_\-frequencies\-\_\-tree}}
+\index{sorted\-\_\-frequencies\-\_\-tree@{sorted\-\_\-frequencies\-\_\-tree}!frequency_sorter_generator@{frequency\-\_\-sorter\-\_\-generator}}
+\subsubsection[{sorted\-\_\-frequencies\-\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}tuple sorted\-\_\-frequencies\-\_\-tree {\bf construct\-\_\-sorted\-\_\-frequencies\-\_\-hash\-\_\-map}(file\-\_\-input.\-read())}}\label{namespacefrequency__sorter__generator_a46abc2f5c61db548b0851ad685b29a49}

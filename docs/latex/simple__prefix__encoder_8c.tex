@@ -1,0 +1,41 @@
+\hypertarget{simple__prefix__encoder_8c}{\section{/\-Users/sidharthamani/huffman\-\_\-coder/samples/simple\-\_\-prefix\-\_\-encoder.c File Reference}
+\label{simple__prefix__encoder_8c}\index{/\-Users/sidharthamani/huffman\-\_\-coder/samples/simple\-\_\-prefix\-\_\-encoder.\-c@{/\-Users/sidharthamani/huffman\-\_\-coder/samples/simple\-\_\-prefix\-\_\-encoder.\-c}}
+}
+{\ttfamily \#include \char`\"{}simple\-\_\-prefix.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+Include dependency graph for simple\-\_\-prefix\-\_\-encoder.\-c\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{simple__prefix__encoder_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{simple__prefix__encoder_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{simple\-\_\-prefix\-\_\-encoder.\-c@{simple\-\_\-prefix\-\_\-encoder.\-c}!main@{main}}
+\index{main@{main}!simple_prefix_encoder.c@{simple\-\_\-prefix\-\_\-encoder.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{simple__prefix__encoder_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if}(argc < 3)
+    \{
+        printf(\textcolor{stringliteral}{"Intructions : simple\_prefix input\_file output\_file\(\backslash\)n"});
+        exit(0);
+    \}
+    \textcolor{keyword}{struct }\hyperlink{structsimple__prefix}{simple\_prefix} *encoder = \hyperlink{simple__prefix_8h_a9bd5b14908a928a995ad497e7d037394}{init}();
+    encoder->\hyperlink{structsimple__prefix_a73d0a239981b130553964b3839c20bdf}{encode\_file}(argv[1],argv[2]);
+    \textcolor{keywordflow}{return} 0;
+        
+    \textcolor{comment}{/* TO DECODE , USE THIS AS AN EXAMPLE}
+\textcolor{comment}{    struct simple\_prefix *decoder = init();}
+\textcolor{comment}{    decoder->decode\_file("xyz","output");}
+\textcolor{comment}{    return 0;}
+\textcolor{comment}{    */}
+\}
+\end{DoxyCode}
