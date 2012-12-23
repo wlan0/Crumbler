@@ -18,5 +18,8 @@ int main()
         sprintf(comparison_message,"x is greater");
     else
         sprintf(comparison_message,"y is greater");*/
-    printf("%s\n",x->get_integer());
+    printf("%s\n",x->get_integer(x));
+	destroy_Big_Int(x);
+	destroy_Big_Int(y);
+	return 0;
 }

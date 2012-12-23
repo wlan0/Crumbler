@@ -28,7 +28,7 @@ char* long_long_to_char(long long long_long_value)
 
 big_integer* init_big_integer()
 {
-    struct big_integer *temp = (struct big_integer*)malloc(sizeof(struct big_integer*));
+    struct big_integer *temp = (struct big_integer*)malloc(sizeof(struct big_integer));
     return temp;
 }
 
@@ -57,15 +57,14 @@ big_integer* init_big_integer_from_char(char *value)
 	i++;
 	while (i<strlen(value) && value[i++] == '0');
 	i--;
-	char *new_value;
+	char *new_value = (char*)malloc(strlen(value));
 	if(i != strlen(value))
 	{
-		new_value = value + i;
+		memcpy(new_value,value + i,(int)strlen(value) - i);
 	}	
 	else 
 	{
-		new_value = (char *)malloc(1);
-		new_value = "0";
+		memcpy(new_value,"0",1);
 	}
 	struct big_integer *temp = init_big_integer();
 	((value[0] == '-')?(temp->value=new_value+1,temp->sign = -1):(temp->value = new_value,temp->sign = 1));
@@ -81,6 +80,20 @@ int compare_big_integers(struct big_integer *operand1, struct big_integer *opera
 	return strcmp(operand1->value,operand2->value);
 }
 	
+big_integer* add_big_integers(struct big_integer *operand1, struct big_integer *operand2)
+{
+	int larger=strlen(operand1->value)>strlen(operand2->value)?1:2;
+	char new_value[strlen(operand1->value)>strlen(operand2->value)?strlen(operand1->value)+1:strlen(operand2->value)+1];
+	new_value[0] = '0';
+	
+}
+
+void destroy_big_integer(big_integer *obj)
+{
+	free(obj->value);
+	free(obj);
+}
+
 /*
 int main()
 {
