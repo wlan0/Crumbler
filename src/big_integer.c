@@ -67,20 +67,26 @@ Big_Int* init_Big_Int_from_int(int value)
 	return temp;
 }
 
+//only comapres two positive big integers
 int compare_Big_Ints(Big_Int *operand1,Big_Int *operand2)
 {
 	return compare_big_integers(operand1->integer,operand2->integer);
-}
-
-Big_Int* add_Big_Ints(Big_Int *operand1,Big_Int *operand2,Big_Int *result)
-{
-	
 }
 
 void destroy_Big_Int(Big_Int *obj)
 {
 	destroy_big_integer(obj->integer);
 	free(obj);
+}
+
+//only adds two positive big integers
+Big_Int* add_Big_Ints(Big_Int *operand1,Big_Int *operand2,Big_Int *result)
+{
+	struct Big_Int *temp = init_Big_Int();
+	temp->integer = add_big_integers(operand1->integer,operand2->integer,temp->integer);
+	destroy_Big_Int(result);
+	result = temp;
+	return result;
 }
 
 /*int main()
