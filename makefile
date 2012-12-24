@@ -1,4 +1,4 @@
-build: simple_prefix.o big_integer.o
+install: simple_prefix.o big_integer.o
 	echo "Build Completed!"
 
 big_integer.o: big_integer_impl.o
