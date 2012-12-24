@@ -1,46 +1,70 @@
 \hypertarget{simple__prefix_8h}{\section{/\-Users/sidharthamani/huffman\-\_\-coder/include/simple\-\_\-prefix.h File Reference}
 \label{simple__prefix_8h}\index{/\-Users/sidharthamani/huffman\-\_\-coder/include/simple\-\_\-prefix.\-h@{/\-Users/sidharthamani/huffman\-\_\-coder/include/simple\-\_\-prefix.\-h}}
 }
+
+
+serves as the interface to \hyperlink{structsimple__prefix}{simple\-\_\-prefix} This file contains functions required to support encoding and de-\/coding on files.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 23 Dec 2012 \par
+  
+
+
 {\ttfamily \#include \char`\"{}simple\-\_\-prefix\-\_\-impl.\-h\char`\"{}}\\*
-Include dependency graph for simple\-\_\-prefix.\-h\-:
-This graph shows which files directly or indirectly include this file\-:
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structsimple__prefix}{simple\-\_\-prefix}
-\end{DoxyCompactItemize}
-\subsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef struct \hyperlink{structsimple__prefix}{simple\-\_\-prefix} \hyperlink{simple__prefix_8h_a7d6089974f5d15d068518c5de7c9d1b7}{simple\-\_\-prefix}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the interface to the simple prefix functions \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structsimple__prefix}{simple\-\_\-prefix} $\ast$ \hyperlink{simple__prefix_8h_a9bd5b14908a928a995ad497e7d037394}{init} ()
-\end{DoxyCompactItemize}
+\hyperlink{structsimple__prefix}{simple\-\_\-prefix} $\ast$ \hyperlink{simple__prefix_8h_af2b9e30061b1c800008e5b55f93ab283}{init} ()
+\begin{DoxyCompactList}\small\item\em it allocates memory for the \hyperlink{structsimple__prefix}{simple\-\_\-prefix} structure and initializes the functors\par
+ {\bfseries Precondition\-:} The structure receiving the allocated memory shouold not have already been allocated memory \par
+ {\bfseries Postcondition\-:}Memory is allocated and functors are initialized and a pointer to the allocated memory is returned to the calling environment \par
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Typedef Documentation}
-\hypertarget{simple__prefix_8h_a7d6089974f5d15d068518c5de7c9d1b7}{\index{simple\-\_\-prefix.\-h@{simple\-\_\-prefix.\-h}!simple\-\_\-prefix@{simple\-\_\-prefix}}
-\index{simple\-\_\-prefix@{simple\-\_\-prefix}!simple_prefix.h@{simple\-\_\-prefix.\-h}}
-\subsubsection[{simple\-\_\-prefix}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf simple\-\_\-prefix} {\bf simple\-\_\-prefix}}}\label{simple__prefix_8h_a7d6089974f5d15d068518c5de7c9d1b7}
+\subsection{Detailed Description}
+serves as the interface to \hyperlink{structsimple__prefix}{simple\-\_\-prefix} This file contains functions required to support encoding and de-\/coding on files.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 23 Dec 2012 \par
+ 
+
+Definition in file \hyperlink{}{simple\-\_\-prefix.\-h}.
+
 
 
 \subsection{Function Documentation}
-\hypertarget{simple__prefix_8h_a9bd5b14908a928a995ad497e7d037394}{\index{simple\-\_\-prefix.\-h@{simple\-\_\-prefix.\-h}!init@{init}}
+\hypertarget{simple__prefix_8h_af2b9e30061b1c800008e5b55f93ab283}{\index{simple\-\_\-prefix.\-h@{simple\-\_\-prefix.\-h}!init@{init}}
 \index{init@{init}!simple_prefix.h@{simple\-\_\-prefix.\-h}}
-\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf simple\-\_\-prefix}$\ast$ init (
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf simple\-\_\-prefix} $\ast$ init (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{simple__prefix_8h_a9bd5b14908a928a995ad497e7d037394}
+)}}\label{simple__prefix_8h_af2b9e30061b1c800008e5b55f93ab283}
+
+
+it allocates memory for the \hyperlink{structsimple__prefix}{simple\-\_\-prefix} structure and initializes the functors\par
+ {\bfseries Precondition\-:} The structure receiving the allocated memory shouold not have already been allocated memory \par
+ {\bfseries Postcondition\-:}Memory is allocated and functors are initialized and a pointer to the allocated memory is returned to the calling environment \par
+ 
+
+\begin{DoxyReturn}{Returns}
+returns a pointer to freshly allocated memory 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file simple\-\_\-prefix.\-c.
+
 
 \begin{DoxyCode}
 \{
     \textcolor{keyword}{struct }\hyperlink{structsimple__prefix}{simple\_prefix} *x\_simple\_prefix = (\textcolor{keyword}{struct }\hyperlink{structsimple__prefix}{simple\_prefix}
       *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structsimple__prefix}{simple\_prefix}));
-    x\_simple\_prefix->\hyperlink{structsimple__prefix_a73d0a239981b130553964b3839c20bdf}{encode\_file} = \hyperlink{simple__prefix_8c_ac55c02996682de17f87b5c1116bb9944}{x\_encode\_file};
-    x\_simple\_prefix->\hyperlink{structsimple__prefix_a58708e15f01f3be37e12d3194e953b41}{decode\_file} = \hyperlink{simple__prefix_8c_a1c9ef3bc94f0f14191b5956bb4040867}{x\_decode\_file};
+    x\_simple\_prefix->\hyperlink{structsimple__prefix_a73d0a239981b130553964b3839c20bdf}{encode\_file} = \hyperlink{simple__prefix_8c_aa71732b02f99cbdbee35eb443ec58501}{x\_encode\_file};
+    x\_simple\_prefix->\hyperlink{structsimple__prefix_a58708e15f01f3be37e12d3194e953b41}{decode\_file} = \hyperlink{simple__prefix_8c_a3d40a628ebc584a050b175aef67457b7}{x\_decode\_file};
     \textcolor{keywordflow}{return} x\_simple\_prefix;
 \}\end{DoxyCode}

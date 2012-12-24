@@ -1,13 +1,30 @@
 \hypertarget{big__integer__comparator_8c}{\section{/\-Users/sidharthamani/huffman\-\_\-coder/samples/big\-\_\-integer\-\_\-comparator.c File Reference}
 \label{big__integer__comparator_8c}\index{/\-Users/sidharthamani/huffman\-\_\-coder/samples/big\-\_\-integer\-\_\-comparator.\-c@{/\-Users/sidharthamani/huffman\-\_\-coder/samples/big\-\_\-integer\-\_\-comparator.\-c}}
 }
+
+
+A sample implementation of \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} comparison using crumbler library \par
+ Author \-: Sidhartha Mani \par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last updated on \-: 24 Dec 2012.  
+
+
 {\ttfamily \#include \char`\"{}big\-\_\-integer.\-h\char`\"{}}\\*
-Include dependency graph for big\-\_\-integer\-\_\-comparator.\-c\-:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{big__integer__comparator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A sample implementation of \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} comparison using crumbler library \par
+ Author \-: Sidhartha Mani \par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last updated on \-: 24 Dec 2012. 
+
+Definition in file \hyperlink{}{big\-\_\-integer\-\_\-comparator.\-c}.
+
 
 
 \subsection{Function Documentation}
@@ -19,6 +36,10 @@ int \hyperlink{big__integer__comparator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{ma
 \end{DoxyParamCaption}
 )}}\label{big__integer__comparator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
 
+
+Definition at line 11 of file big\-\_\-integer\-\_\-comparator.\-c.
+
+
 \begin{DoxyCode}
 \{
     \textcolor{keywordtype}{char} integer1[2250];
@@ -27,9 +48,9 @@ int \hyperlink{big__integer__comparator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{ma
     scanf(\textcolor{stringliteral}{"%s"},integer1);
     printf(\textcolor{stringliteral}{"Enter y\(\backslash\)n"});
     scanf(\textcolor{stringliteral}{"%s"},integer2);
-    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *x= \hyperlink{big__integer_8h_a09afd63acdaebc41e137d03aa2381a06}{init\_Big\_Int\_from\_char}(
+    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *x= \hyperlink{big__integer_8h_ae14e62d253605c66f8ff24d6ff75e5b9}{init\_Big\_Int\_from\_char}(
       integer1);
-    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *y = \hyperlink{big__integer_8h_a09afd63acdaebc41e137d03aa2381a06}{init\_Big\_Int\_from\_char}(
+    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *y = \hyperlink{big__integer_8h_ae14e62d253605c66f8ff24d6ff75e5b9}{init\_Big\_Int\_from\_char}(
       integer2);
     \textcolor{keywordtype}{int} compare = \hyperlink{big__integer_8h_a10fcd5cea7ae6f94061e05475c9ed397}{compare\_Big\_Ints}(x,y);
     \textcolor{keywordtype}{char} comparison\_message[50];
@@ -39,7 +60,7 @@ int \hyperlink{big__integer__comparator_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{ma
         sprintf(comparison\_message,\textcolor{stringliteral}{"x is greater"});
     \textcolor{keywordflow}{else}
         sprintf(comparison\_message,\textcolor{stringliteral}{"y is greater"});    
-    x = \hyperlink{big__integer_8h_a80b3b1955162bdbe4a92b73a576174a1}{add\_Big\_Ints}(x,y,x);
+    x = \hyperlink{big__integer_8h_a48953f2a94ebd2c4441734fca02005c0}{add\_Big\_Ints}(x,y,x);
     printf(\textcolor{stringliteral}{"%s\(\backslash\)nSUM: %s\(\backslash\)n"},comparison\_message,x->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer}(x));
     \hyperlink{big__integer_8c_a45174c2ae172f98bd7045eaaf7c51800}{destroy\_Big\_Int}(x);
     \hyperlink{big__integer_8c_a45174c2ae172f98bd7045eaaf7c51800}{destroy\_Big\_Int}(y);

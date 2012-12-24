@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['node',['../structnode.html',1,'']]]
+  ['node',['node',['../simple__prefix__impl_8h.html#structnode',1,'']]]
 ];

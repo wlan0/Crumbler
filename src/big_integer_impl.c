@@ -1,17 +1,42 @@
+/*!
+ * \file big_integer_impl.c
+ * \brief The implementation of big_integer logic
+ * This file contains functions required to support the big integer manipulation functions.<br/> 
+ * Author : Sidhartha Mani<br/>
+ * Contact : sidharthamn@gmail.com <br/>
+ * Last Updated : 24 Dec 2012 <br/>
+ * \ingroup core 
+ */
+
 #include "big_integer_impl.h"
 
+/*! \fn char* reverse_string(char* string)
+ *  \brief reverse a string <br/>
+ *  <b>Postcondition:</b> The original string is reversed <br/>
+ *  \param string the string to be reversed. Incidentally, the reversed string is the same
+ *  as the original string. That is the original string is reversed.
+ *  \return A pointer to the reversed/original string
+ */
 char* reverse_string(char* string)
 {
 	char reversed_string[(int)strlen(string)];
 	int i = 0;
 	int j = (int)strlen(string);
-	while (j--) {
+	while (j--) 
+	{
 		reversed_string[j] = string[i++];
 	}
 	memcpy(string,reversed_string,strlen(string));
 	return string;
 }
 
+/*! \fn char* long_long_to_char(long long long_long_value)
+ *  \brief converts any positive long long integer into its character representation <br/>
+ *  <b> Precondition: </b> the string capturing the returned string should not have already been allocated memory <br/>
+ *  <b> Postcondition: </b>the character representation of the integer is returned to the calling environment <br/>
+ *  \param long_long_value The positive integer to be converted to string
+ *  \return a pointer to the converted string
+ */
 char* long_long_to_char(long long long_long_value)
 {
     char *temp = (char *)malloc(15);
@@ -26,6 +51,12 @@ char* long_long_to_char(long long long_long_value)
 	return temp;
 }
 
+/*! \fn big_integer* init_big_integer()
+ *  \brief allocates memory for a new big_integer structure and returns a pointer to the allocated memory <br/>
+ *  <b> Precondition: </b> the variable capturing the returned value should not have already been allocated memory <br/>
+ *  <b> Postcondition: </b> memory is allocated and returned to the calling environment
+ *  \return a pointer to the allocated memory
+ */
 big_integer* init_big_integer()
 {
     struct big_integer *temp = (struct big_integer*)malloc(sizeof(struct big_integer));
@@ -33,6 +64,14 @@ big_integer* init_big_integer()
     return temp;
 }
 
+/*! \fn big_integer* init_big_integer_from_long(long long long_long_value)
+ *  \brief allocates memory for a new big_integer structure and returns a pointer to the allocated memory and initializes
+ *  it to the value in long_long_value<br/>
+ *  <b> Precondition: </b> the variable capturing the returned value should not have already been allocated memory <br/>
+ *  <b> Postcondition: </b> memory is allocated and initialized before returning to the calling environment
+ *  \param long_long_value the long long value, that will be converted into big integer representation
+ *  \return a pointer to the allocated and initialized memory
+ */
 big_integer* init_big_integer_from_long(long long long_long_value)
 {
     struct big_integer *temp = init_big_integer();
@@ -41,11 +80,27 @@ big_integer* init_big_integer_from_long(long long long_long_value)
     return temp;
 }
 
+/*! \fn big_integer* init_big_integer_from_int(int int_value)
+ *  \brief allocates memory for a new big_integer structure and returns a pointer to the allocated memory and initializes
+ *  it to the value in int_value<br/>
+ *  <b> Precondition: </b> the variable capturing the returned value should not have already been allocated memory <br/>
+ *  <b> Postcondition: </b> memory is allocated and initialized before returning to the calling environment
+ *  \param int_value the long int value, that will be converted into big integer representation
+ *  \return a pointer to the allocated and initialized memory
+ */
 big_integer* init_big_integer_from_int(int int_value)
 {
 	return init_big_integer_from_long((long long)int_value);
 }
 
+/*! \fn big_integer* init_big_integer_from_char(char *value)
+ *  \brief allocates memory for a new big_integer structure and returns a pointer to the allocated memory and initializes
+ *  it to the value in value<br/>
+ *  <b> Precondition: </b> the variable capturing the returned value should not have already been allocated memory <br/>
+ *  <b> Postcondition: </b> memory is allocated and initialized before returning to the calling environment
+ *  \param value the value, that will be converted into big integer representation
+ *  \return a pointer to the allocated and initialized memory
+ */
 big_integer* init_big_integer_from_char(char *value)
 {
 	int i = strlen(value);
@@ -72,7 +127,17 @@ big_integer* init_big_integer_from_char(char *value)
 	return temp;
 }
 
-//only compares two positive integers
+/*! \fn int compare_big_integers(struct big_integer *operand1, struct big_integer *operand2)
+ *  \brief compares two positive integers only <br/>
+ *  <b> Precondition: </b> the numbers being compared should both be positive <br/>
+ *  <b> Postcondition: </b>The comparison result is returned
+ *  \param operand1 the operand against which the other operand will be compared
+ *  \param operand2 the operand which will be compared against operand1
+ *  \return <br/>
+ *  Returns   0 : if both numbers are equal <br/>
+ *  Returns > 0 : if first value is larger <br/>
+ *  Returns < 0 : if first value is smaller
+ */ 
 int compare_big_integers(struct big_integer *operand1, struct big_integer *operand2)
 {
 	if(strlen(operand1->value) != strlen(operand2->value))
@@ -82,13 +147,27 @@ int compare_big_integers(struct big_integer *operand1, struct big_integer *opera
 	return strcmp(operand1->value,operand2->value);
 }
 	
+/*! \fn void destroy_big_integer(big_integer *obj)
+ *  \brief frees the allocated memory <br/>
+ *  <b> Precondition: </b> the big_integer pointer which is being freed should not have been freed already <br/>
+ *  <b> Postcondition: </b>The big_integer structure is freed
+ *  \param operand1 the pointer to the structure which should be freed
+ *  \return Nothing
+ */ 
 void destroy_big_integer(big_integer *obj)
 {
 	free(obj->value);
 	free(obj);
 }
 
-//only adds two positive integers
+/*! \fn big_integer* add_big_integers(struct big_integer *operand1, struct big_integer *operand2,struct big_integer *result)
+ *  \brief adds two positive integers only<br/>
+ *  <b> Postcondition: </b>the big_integer object containing the sum is returned
+ *  \param operand1 the first big_integer operand for addition
+ *  \param operand2 the second big_integer operand for addition
+ *  \param result the big_integer structure in which the result should be stored, its ok if it was previously initialized or not
+ *  \return a pointer to the big_integer holding the sum
+ */
 big_integer* add_big_integers(struct big_integer *operand1, struct big_integer *operand2,struct big_integer *result)
 {
 	int larger=(compare_big_integers(operand1,operand2)>=0)?1:2;
@@ -103,14 +182,14 @@ big_integer* add_big_integers(struct big_integer *operand1, struct big_integer *
 	int sum;
 	int carry = 0;
 	char *new_new_value;
-	while (i--) {
+	while (i--) 
+	{
 		if (j>=0)
 		sum = ((int)larger_integer->value[i] - (int)'0') + ((int)shorter_integer->value[j--] - (int)'0')+ carry;
 		else
 		sum = ((int)larger_integer->value[i] - (int)'0') + carry;
 		carry = sum/10;
 		sum = sum%10;
-		//printf("sum:%d carry:%d pos:%d value:%c\n",sum,carry,k,(char)(sum + '0'));
 		new_value[k--] = (char)(sum + '0');
 	}
 	if (carry != 0)

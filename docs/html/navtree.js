@@ -1,13 +1,17 @@
 var NAVTREE =
 [
-  [ "Huffman", "index.html", [
-    [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
-      ] ]
+  [ "Crumbler", "index.html", [
+    [ "Welcome to Crumbler", "index.html", null ],
+    [ "Crumbler Project", "proejct.html", null ],
+    [ "Coding Standards", "coding_standards.html", null ],
+    [ "Vacancies", "vacancies.html", null ],
+    [ "License", "license.html", null ],
+    [ "Developers", "developers.html", null ],
+    [ "Modules", "modules.html", "modules" ],
+    [ "Namespace Members", "namespacemembers.html", [
+      [ "All", "namespacemembers.html", null ],
+      [ "Functions", "namespacemembers_func.html", null ],
+      [ "Variables", "namespacemembers_vars.html", null ]
     ] ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
@@ -22,7 +26,6 @@ var NAVTREE =
       [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]

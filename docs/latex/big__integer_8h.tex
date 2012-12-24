@@ -1,59 +1,101 @@
 \hypertarget{big__integer_8h}{\section{/\-Users/sidharthamani/huffman\-\_\-coder/include/big\-\_\-integer.h File Reference}
 \label{big__integer_8h}\index{/\-Users/sidharthamani/huffman\-\_\-coder/include/big\-\_\-integer.\-h@{/\-Users/sidharthamani/huffman\-\_\-coder/include/big\-\_\-integer.\-h}}
 }
+
+
+serves as the interface to Big Integer Implementation This file contains functions required to support big integer manipulation.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 23 Dec 2012 \par
+  
+
+
 {\ttfamily \#include \char`\"{}big\-\_\-integer\-\_\-impl.\-h\char`\"{}}\\*
-Include dependency graph for big\-\_\-integer.\-h\-:
-This graph shows which files directly or indirectly include this file\-:
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{struct_big___int}{Big\-\_\-\-Int}
-\end{DoxyCompactItemize}
-\subsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef struct \hyperlink{struct_big___int}{Big\-\_\-\-Int} \hyperlink{big__integer_8h_a9d7cf55b60746e4ac481c18f72f71267}{Big\-\_\-\-Int}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A data structure that holds big integer values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_ad2bdcff5870378868eebaebc64363bb4}{init\-\_\-\-Big\-\_\-\-Int} ()
-\item 
-\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a09afd63acdaebc41e137d03aa2381a06}{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char} (char $\ast$value)
-\item 
-\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a0c2885b6802e073ab77344b7323b4880}{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long} (long long value)
-\item 
-\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a70280d3fbe2128f5bd1801dddcb781c1}{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int} (int value)
-\item 
-\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a80b3b1955162bdbe4a92b73a576174a1}{add\-\_\-\-Big\-\_\-\-Ints} (\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$operand1, \hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$operand2, \hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$result)
-\item 
+\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a20af4609c2f9d837a45de3b064f3db2c}{init\-\_\-\-Big\-\_\-\-Int} ()
+\begin{DoxyCompactList}\small\item\em allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int} and returns a pointer to allocated memory \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is allocated memory \par
+ \end{DoxyCompactList}\item 
+\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_ae14e62d253605c66f8ff24d6ff75e5b9}{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char} (char $\ast$value)
+\begin{DoxyCompactList}\small\item\em allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int}, initializes it to the value in value and returns a pointer to allocated memory. \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is initialized and allocated memory \par
+ \end{DoxyCompactList}\item 
+\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a0d5d46f3e06f4ceef0101691f01f176d}{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long} (long long value)
+\begin{DoxyCompactList}\small\item\em allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int}, initializes it to the value in value and returns a pointer to allocated memory. \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is initialized and allocated memory \par
+ \end{DoxyCompactList}\item 
+\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a9ce82ad9cf08002aea458b75978d13b1}{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int} (int value)
+\begin{DoxyCompactList}\small\item\em allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int}, initializes it to the value in value and returns a pointer to allocated memory. \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is initialized and allocated memory \par
+ \end{DoxyCompactList}\item 
+\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$ \hyperlink{big__integer_8h_a48953f2a94ebd2c4441734fca02005c0}{add\-\_\-\-Big\-\_\-\-Ints} (\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$operand1, \hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$operand2, \hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$result)
+\begin{DoxyCompactList}\small\item\em adds two positive integers only\par
+ {\bfseries  Postcondition\-: }the \hyperlink{struct_big___int}{Big\-\_\-\-Int} object containing the sum is returned \end{DoxyCompactList}\item 
 int \hyperlink{big__integer_8h_a10fcd5cea7ae6f94061e05475c9ed397}{compare\-\_\-\-Big\-\_\-\-Ints} (\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$operand1, \hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$operand2)
-\item 
+\begin{DoxyCompactList}\small\item\em comapres two positive big integers only \par
+ {\bfseries Precondition \-:} Both operand should have been initialized {\bfseries Postcondition \-:} The comparison result is provided \end{DoxyCompactList}\item 
 void \hyperlink{big__integer_8h_abca06973c6a07b233117eec96303b5b3}{destroy\-\_\-\-Big\-\_\-int} (\hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$obj)
 \end{DoxyCompactItemize}
 
 
-\subsection{Typedef Documentation}
-\hypertarget{big__integer_8h_a9d7cf55b60746e4ac481c18f72f71267}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!Big\-\_\-\-Int@{Big\-\_\-\-Int}}
-\index{Big\-\_\-\-Int@{Big\-\_\-\-Int}!big_integer.h@{big\-\_\-integer.\-h}}
-\subsubsection[{Big\-\_\-\-Int}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Big\-\_\-\-Int} {\bf Big\-\_\-\-Int}}}\label{big__integer_8h_a9d7cf55b60746e4ac481c18f72f71267}
+\subsection{Detailed Description}
+serves as the interface to Big Integer Implementation This file contains functions required to support big integer manipulation.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 23 Dec 2012 \par
+ 
+
+Definition in file \hyperlink{}{big\-\_\-integer.\-h}.
+
 
 
 \subsection{Function Documentation}
-\hypertarget{big__integer_8h_a80b3b1955162bdbe4a92b73a576174a1}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!add\-\_\-\-Big\-\_\-\-Ints@{add\-\_\-\-Big\-\_\-\-Ints}}
+\hypertarget{big__integer_8h_a48953f2a94ebd2c4441734fca02005c0}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!add\-\_\-\-Big\-\_\-\-Ints@{add\-\_\-\-Big\-\_\-\-Ints}}
 \index{add\-\_\-\-Big\-\_\-\-Ints@{add\-\_\-\-Big\-\_\-\-Ints}!big_integer.h@{big\-\_\-integer.\-h}}
-\subsubsection[{add\-\_\-\-Big\-\_\-\-Ints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int}$\ast$ add\-\_\-\-Big\-\_\-\-Ints (
+\subsubsection[{add\-\_\-\-Big\-\_\-\-Ints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int} $\ast$ add\-\_\-\-Big\-\_\-\-Ints (
 \begin{DoxyParamCaption}
 \item[{{\bf Big\-\_\-\-Int} $\ast$}]{operand1, }
 \item[{{\bf Big\-\_\-\-Int} $\ast$}]{operand2, }
 \item[{{\bf Big\-\_\-\-Int} $\ast$}]{result}
 \end{DoxyParamCaption}
-)}}\label{big__integer_8h_a80b3b1955162bdbe4a92b73a576174a1}
+)}}\label{big__integer_8h_a48953f2a94ebd2c4441734fca02005c0}
+
+
+adds two positive integers only\par
+ {\bfseries  Postcondition\-: }the \hyperlink{struct_big___int}{Big\-\_\-\-Int} object containing the sum is returned 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operand1} & the first \hyperlink{struct_big___int}{Big\-\_\-\-Int} operand for addition \\
+\hline
+{\em operand2} & the second \hyperlink{struct_big___int}{Big\-\_\-\-Int} operand for addition \\
+\hline
+{\em result} & the \hyperlink{struct_big___int}{Big\-\_\-\-Int} structure in which the result should be stored, its ok if it was previously initialized or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the \hyperlink{struct_big___int}{Big\-\_\-\-Int} holding the sum 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file big\-\_\-integer.\-c.
+
 
 \begin{DoxyCode}
 \{
-    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *temp = \hyperlink{big__integer_8h_ad2bdcff5870378868eebaebc64363bb4}{init\_Big\_Int}();
-    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_a166ce246dbb5f170130a647c7b3fabe7}{add\_big\_integers}(operand1->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer}
+    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *temp = \hyperlink{big__integer_8h_a20af4609c2f9d837a45de3b064f3db2c}{init\_Big\_Int}();
+    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_acaa9b81fceecc01e260e7011fda3d628}{add\_big\_integers}(operand1->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer}
       ,operand2->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer},temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer});
     \hyperlink{big__integer_8c_a45174c2ae172f98bd7045eaaf7c51800}{destroy\_Big\_Int}(result);
     result = temp;
@@ -69,6 +111,28 @@ void \hyperlink{big__integer_8h_abca06973c6a07b233117eec96303b5b3}{destroy\-\_\-
 \end{DoxyParamCaption}
 )}}\label{big__integer_8h_a10fcd5cea7ae6f94061e05475c9ed397}
 
+
+comapres two positive big integers only \par
+ {\bfseries Precondition \-:} Both operand should have been initialized {\bfseries Postcondition \-:} The comparison result is provided 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operand1} & the operand against which the other operand will be compared \\
+\hline
+{\em operand2} & the operand which will be compared against operand1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\par
+ Returns 0 \-: if both numbers are equal \par
+ Returns $>$ 0 \-: if first value is larger \par
+ Returns $<$ 0 \-: if first value is smaller 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file big\-\_\-integer.\-c.
+
+
 \begin{DoxyCode}
 \{
     \textcolor{keywordflow}{return} \hyperlink{big__integer__impl_8h_a12e0894b8887892194604e1217fe2afd}{compare\_big\_integers}(operand1->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer},
@@ -82,83 +146,154 @@ void \hyperlink{big__integer_8h_abca06973c6a07b233117eec96303b5b3}{destroy\-\_\-
 \item[{{\bf Big\-\_\-\-Int} $\ast$}]{obj}
 \end{DoxyParamCaption}
 )}}\label{big__integer_8h_abca06973c6a07b233117eec96303b5b3}
-\hypertarget{big__integer_8h_ad2bdcff5870378868eebaebc64363bb4}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int@{init\-\_\-\-Big\-\_\-\-Int}}
+\hypertarget{big__integer_8h_a20af4609c2f9d837a45de3b064f3db2c}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int@{init\-\_\-\-Big\-\_\-\-Int}}
 \index{init\-\_\-\-Big\-\_\-\-Int@{init\-\_\-\-Big\-\_\-\-Int}!big_integer.h@{big\-\_\-integer.\-h}}
-\subsubsection[{init\-\_\-\-Big\-\_\-\-Int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int}$\ast$ init\-\_\-\-Big\-\_\-\-Int (
+\subsubsection[{init\-\_\-\-Big\-\_\-\-Int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int} $\ast$ init\-\_\-\-Big\-\_\-\-Int (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{big__integer_8h_ad2bdcff5870378868eebaebc64363bb4}
+)}}\label{big__integer_8h_a20af4609c2f9d837a45de3b064f3db2c}
+
+
+allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int} and returns a pointer to allocated memory \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is allocated memory \par
+ 
+
+\begin{DoxyReturn}{Returns}
+a pointer to the newly allocated memory to hold a \hyperlink{struct_big___int}{Big\-\_\-\-Int} variable 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file big\-\_\-integer.\-c.
+
 
 \begin{DoxyCode}
 \{
     \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *temp = (\textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int}*)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} 
       \hyperlink{struct_big___int}{Big\_Int}));
-    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_a12a72eb0245b2fbd9cce5dacaf877a72}{init\_big\_integer}();
-    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ac2526efa6d8c1b088b805ceb7847fa4b}{get\_integer\_as\_char};
+    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_ad427e9cea709aee7a823b0136216fbfc}{init\_big\_integer}();
+    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ab9e4a03f73b239e7b1b77623507f1325}{get\_integer\_as\_char};
     temp->\hyperlink{struct_big___int_ae06ba678ba07ecdac264605bc8576da2}{get\_sign} = \hyperlink{big__integer_8c_a837651f373a264834cfb80be16d0ab32}{get\_sign\_as\_int};
     temp->\hyperlink{struct_big___int_a34a65fb8d8cc2acf5a14a18c420ee774}{set\_integer} = \hyperlink{big__integer_8c_a83fca4473e21f926f011b283b0cc7bc8}{set\_integer};
     temp->\hyperlink{struct_big___int_a70cf790b3af136aad25fa028cde3e801}{set\_sign} = \hyperlink{big__integer_8c_a1e8a8230d017886a82eb0a884f6fe12c}{set\_sign};
     \textcolor{keywordflow}{return} temp;
 \}
 \end{DoxyCode}
-\hypertarget{big__integer_8h_a09afd63acdaebc41e137d03aa2381a06}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char}}
+\hypertarget{big__integer_8h_ae14e62d253605c66f8ff24d6ff75e5b9}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char}}
 \index{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char}!big_integer.h@{big\-\_\-integer.\-h}}
-\subsubsection[{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int}$\ast$ init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char (
+\subsubsection[{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int} $\ast$ init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-char (
 \begin{DoxyParamCaption}
 \item[{char $\ast$}]{value}
 \end{DoxyParamCaption}
-)}}\label{big__integer_8h_a09afd63acdaebc41e137d03aa2381a06}
+)}}\label{big__integer_8h_ae14e62d253605c66f8ff24d6ff75e5b9}
+
+
+allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int}, initializes it to the value in value and returns a pointer to allocated memory. \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is initialized and allocated memory \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value that will be copied into the new \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the newly allocated memory to hold a \hyperlink{struct_big___int}{Big\-\_\-\-Int} variable containing the value in value 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file big\-\_\-integer.\-c.
+
 
 \begin{DoxyCode}
 \{
     \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *temp = (\textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int}*)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} 
       \hyperlink{struct_big___int}{Big\_Int}));
-    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} =\hyperlink{big__integer__impl_8h_ae5846e7d790674af85e50c7a66017537}{init\_big\_integer\_from\_char}(
+    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} =\hyperlink{big__integer__impl_8h_a78fe148b385a4ccb53b8b6c9cac949cb}{init\_big\_integer\_from\_char}(
       value);
-    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ac2526efa6d8c1b088b805ceb7847fa4b}{get\_integer\_as\_char};
+    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ab9e4a03f73b239e7b1b77623507f1325}{get\_integer\_as\_char};
     temp->\hyperlink{struct_big___int_ae06ba678ba07ecdac264605bc8576da2}{get\_sign} = \hyperlink{big__integer_8c_a837651f373a264834cfb80be16d0ab32}{get\_sign\_as\_int};
     temp->\hyperlink{struct_big___int_a34a65fb8d8cc2acf5a14a18c420ee774}{set\_integer} = \hyperlink{big__integer_8c_a83fca4473e21f926f011b283b0cc7bc8}{set\_integer};
     temp->\hyperlink{struct_big___int_a70cf790b3af136aad25fa028cde3e801}{set\_sign} = \hyperlink{big__integer_8c_a1e8a8230d017886a82eb0a884f6fe12c}{set\_sign};
     \textcolor{keywordflow}{return} temp;
 \}
 \end{DoxyCode}
-\hypertarget{big__integer_8h_a70280d3fbe2128f5bd1801dddcb781c1}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int}}
+\hypertarget{big__integer_8h_a9ce82ad9cf08002aea458b75978d13b1}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int}}
 \index{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int}!big_integer.h@{big\-\_\-integer.\-h}}
-\subsubsection[{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int}$\ast$ init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int (
+\subsubsection[{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int} $\ast$ init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-int (
 \begin{DoxyParamCaption}
 \item[{int}]{value}
 \end{DoxyParamCaption}
-)}}\label{big__integer_8h_a70280d3fbe2128f5bd1801dddcb781c1}
+)}}\label{big__integer_8h_a9ce82ad9cf08002aea458b75978d13b1}
+
+
+allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int}, initializes it to the value in value and returns a pointer to allocated memory. \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is initialized and allocated memory \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value that will be copied into the new \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the newly allocated memory to hold a \hyperlink{struct_big___int}{Big\-\_\-\-Int} variable containing the value in value 
+\end{DoxyReturn}
+
+
+Definition at line 124 of file big\-\_\-integer.\-c.
+
 
 \begin{DoxyCode}
 \{
     \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *temp = (\textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int}*)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} 
       \hyperlink{struct_big___int}{Big\_Int}));
-    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_a4c0bcb12462f0ee91ab4e2a50648959d}{init\_big\_integer\_from\_int}(
+    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_aba2b222c87a6ad23da34a0c8000e2506}{init\_big\_integer\_from\_int}(
       value);
-    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ac2526efa6d8c1b088b805ceb7847fa4b}{get\_integer\_as\_char};
+    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ab9e4a03f73b239e7b1b77623507f1325}{get\_integer\_as\_char};
     temp->\hyperlink{struct_big___int_ae06ba678ba07ecdac264605bc8576da2}{get\_sign} = \hyperlink{big__integer_8c_a837651f373a264834cfb80be16d0ab32}{get\_sign\_as\_int};
     temp->\hyperlink{struct_big___int_a34a65fb8d8cc2acf5a14a18c420ee774}{set\_integer} = \hyperlink{big__integer_8c_a83fca4473e21f926f011b283b0cc7bc8}{set\_integer};
     temp->\hyperlink{struct_big___int_a70cf790b3af136aad25fa028cde3e801}{set\_sign} = \hyperlink{big__integer_8c_a1e8a8230d017886a82eb0a884f6fe12c}{set\_sign};
     \textcolor{keywordflow}{return} temp;
 \}
 \end{DoxyCode}
-\hypertarget{big__integer_8h_a0c2885b6802e073ab77344b7323b4880}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long}}
+\hypertarget{big__integer_8h_a0d5d46f3e06f4ceef0101691f01f176d}{\index{big\-\_\-integer.\-h@{big\-\_\-integer.\-h}!init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long}}
 \index{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long@{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long}!big_integer.h@{big\-\_\-integer.\-h}}
-\subsubsection[{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int}$\ast$ init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long (
+\subsubsection[{init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-\_\-\-Int} $\ast$ init\-\_\-\-Big\-\_\-\-Int\-\_\-from\-\_\-long (
 \begin{DoxyParamCaption}
 \item[{long long}]{value}
 \end{DoxyParamCaption}
-)}}\label{big__integer_8h_a0c2885b6802e073ab77344b7323b4880}
+)}}\label{big__integer_8h_a0d5d46f3e06f4ceef0101691f01f176d}
+
+
+allocates memory for a new \hyperlink{struct_big___int}{Big\-\_\-\-Int}, initializes it to the value in value and returns a pointer to allocated memory. \par
+ {\bfseries  Precondition\-: } the pointer capturing the new memory should not have already been allocated memory \par
+ {\bfseries  Postcondition\-: } the pointer is initialized and allocated memory \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value that will be copied into the new \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the newly allocated memory to hold a \hyperlink{struct_big___int}{Big\-\_\-\-Int} variable containing the value in value 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file big\-\_\-integer.\-c.
+
 
 \begin{DoxyCode}
 \{
     \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *temp = (\textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int}*)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} 
       \hyperlink{struct_big___int}{Big\_Int}));
-    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_a2ea84ff52859d3887e65b120068c0158}{init\_big\_integer\_from\_long}
+    temp->\hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer} = \hyperlink{big__integer__impl_8h_a1329d3ba57def63a30fa2244a547eb29}{init\_big\_integer\_from\_long}
       (value);
-    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ac2526efa6d8c1b088b805ceb7847fa4b}{get\_integer\_as\_char};
+    temp->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer} = \hyperlink{big__integer_8c_ab9e4a03f73b239e7b1b77623507f1325}{get\_integer\_as\_char};
     temp->\hyperlink{struct_big___int_ae06ba678ba07ecdac264605bc8576da2}{get\_sign} = \hyperlink{big__integer_8c_a837651f373a264834cfb80be16d0ab32}{get\_sign\_as\_int};
     temp->\hyperlink{struct_big___int_a34a65fb8d8cc2acf5a14a18c420ee774}{set\_integer} = \hyperlink{big__integer_8c_a83fca4473e21f926f011b283b0cc7bc8}{set\_integer};
     temp->\hyperlink{struct_big___int_a70cf790b3af136aad25fa028cde3e801}{set\_sign} = \hyperlink{big__integer_8c_a1e8a8230d017886a82eb0a884f6fe12c}{set\_sign};

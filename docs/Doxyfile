@@ -26,7 +26,7 @@ DOXYFILE_ENCODING      = UTF-8
 # identify the project. Note that if you do not use Doxywizard you need 
 # to put quotes around the project name if it contains spaces.
 
-PROJECT_NAME           = Huffman
+PROJECT_NAME           = Crumbler
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. 
 # This could be handy for archiving the generated documentation or 
@@ -38,14 +38,14 @@ PROJECT_NUMBER         = v0.1
 # for a project that appears at the top of each page and should give viewer 
 # a quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "An entry project to get accustomed to the world of compression and de-compression"
+PROJECT_BRIEF          = "a multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability"
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is 
 # included in the documentation. The maximum height of the logo should not 
 # exceed 55 pixels and the maximum width should not exceed 200 pixels. 
 # Doxygen will copy the logo to the output directory.
 
-PROJECT_LOGO           = 
+PROJECT_LOGO           = /Users/sidharthamani/huffman_coder/docs/Crumpler_Logo.gif
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 
@@ -327,7 +327,7 @@ INLINE_GROUPED_CLASSES = NO
 # structs, classes, and unions are shown on a separate page (for HTML and Man 
 # pages) or section (for LaTeX and RTF).
 
-INLINE_SIMPLE_STRUCTS  = NO
+INLINE_SIMPLE_STRUCTS  = YES
 
 # When TYPEDEF_HIDES_STRUCT is enabled, a typedef of a struct, union, or enum 
 # is documented as struct, union, or enum with the name of the typedef. So 
@@ -337,7 +337,7 @@ INLINE_SIMPLE_STRUCTS  = NO
 # be useful for C code in case the coding convention dictates that all compound 
 # types are typedef'ed and only the typedef is referenced, never the tag name.
 
-TYPEDEF_HIDES_STRUCT   = NO
+TYPEDEF_HIDES_STRUCT   = YES
 
 # The SYMBOL_CACHE_SIZE determines the size of the internal cache use to 
 # determine which symbols to keep in memory and which to flush to disk. 
@@ -584,7 +584,7 @@ SHOW_FILES             = YES
 # Namespaces page.  This will remove the Namespaces entry from the Quick Index 
 # and from the Folder Tree View (if specified). The default is YES.
 
-SHOW_NAMESPACES        = YES
+SHOW_NAMESPACES        = NO
 
 # The FILE_VERSION_FILTER tag can be used to specify a program or script that 
 # doxygen should invoke to get the current version for each file (typically from 
@@ -832,12 +832,12 @@ FILTER_SOURCE_PATTERNS =
 # Note: To get rid of all source code in the generated output, make sure also 
 # VERBATIM_HEADERS is set to NO.
 
-SOURCE_BROWSER         = NO
+SOURCE_BROWSER         = YES
 
 # Setting the INLINE_SOURCES tag to YES will include the body 
 # of functions and classes directly in the documentation.
 
-INLINE_SOURCES         = NO
+INLINE_SOURCES         = YES
 
 # Setting the STRIP_CODE_COMMENTS tag to YES (the default) will instruct 
 # doxygen to hide any special comment blocks from generated source code 
@@ -849,13 +849,13 @@ STRIP_CODE_COMMENTS    = YES
 # then for each documented function all documented 
 # functions referencing it will be listed.
 
-REFERENCED_BY_RELATION = NO
+REFERENCED_BY_RELATION = YES
 
 # If the REFERENCES_RELATION tag is set to YES 
 # then for each documented function all documented entities 
 # called/used by that function will be listed.
 
-REFERENCES_RELATION    = NO
+REFERENCES_RELATION    = YES
 
 # If the REFERENCES_LINK_SOURCE tag is set to YES (the default) 
 # and SOURCE_BROWSER tag is set to YES, then the hyperlinks from 
@@ -870,7 +870,7 @@ REFERENCES_LINK_SOURCE = YES
 # tagging system (see http://www.gnu.org/software/global/global.html). You 
 # will need version 4.8.6 or higher.
 
-USE_HTAGS              = NO
+USE_HTAGS              = YES
 
 # If the VERBATIM_HEADERS tag is set to YES (the default) then Doxygen 
 # will generate a verbatim copy of the header file for each class for 
@@ -1631,7 +1631,7 @@ PERL_PATH              = /usr/bin/perl
 # this option also works with HAVE_DOT disabled, but it is recommended to 
 # install and use dot, since it yields more powerful graphs.
 
-CLASS_DIAGRAMS         = NO
+CLASS_DIAGRAMS         = YES
 
 # You can define message sequence charts within doxygen comments using the \msc 
 # command. Doxygen will then run the mscgen tool (see 
@@ -1653,7 +1653,7 @@ HIDE_UNDOC_RELATIONS   = YES
 # toolkit from AT&T and Lucent Bell Labs. The other options in this section 
 # have no effect if this option is set to NO (the default)
 
-HAVE_DOT               = YES
+HAVE_DOT               = NO
 
 # The DOT_NUM_THREADS specifies the number of dot invocations doxygen is 
 # allowed to run in parallel. When set to 0 (the default) doxygen will 
@@ -1715,7 +1715,7 @@ UML_LOOK               = NO
 # managable. Set this to 0 for no limit. Note that the threshold may be 
 # exceeded by 50% before the limit is enforced.
 
-UML_LIMIT_NUM_FIELDS   = 10
+UML_LIMIT_NUM_FIELDS   = 50
 
 # If set to YES, the inheritance and collaboration graphs will show the 
 # relations between templates and their instances.
@@ -1816,7 +1816,7 @@ DOT_GRAPH_MAX_NODES    = 50
 # code bases. Also note that the size of a graph can be further restricted by 
 # DOT_GRAPH_MAX_NODES. Using a depth of 0 means no depth restriction.
 
-MAX_DOT_GRAPH_DEPTH    = 0
+MAX_DOT_GRAPH_DEPTH    = 171
 
 # Set the DOT_TRANSPARENT tag to YES to generate images with a transparent 
 # background. This is disabled by default, because dot on Windows does not 

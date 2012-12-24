@@ -3,15 +3,17 @@
 }
 
 
+A data structure that holds big integer values.  
+
+
+
+
 {\ttfamily \#include $<$big\-\_\-integer.\-h$>$}
 
-
-
-Collaboration diagram for Big\-\_\-\-Int\-:
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structbig__integer}{big\-\_\-integer} $\ast$ \hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer}
+struct \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} $\ast$ \hyperlink{struct_big___int_af78495b20eeda6242727ea99032693c2}{integer}
 \item 
 char $\ast$($\ast$ \hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\-\_\-integer} )(struct \hyperlink{struct_big___int}{Big\-\_\-\-Int} $\ast$x)
 \item 
@@ -23,22 +25,49 @@ void($\ast$ \hyperlink{struct_big___int_a70cf790b3af136aad25fa028cde3e801}{set\-
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+A data structure that holds big integer values. 
+
+Definition at line 18 of file big\-\_\-integer.\-h.
+
+
+
 \subsection{Field Documentation}
 \hypertarget{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{\index{Big\-\_\-\-Int@{Big\-\_\-\-Int}!get\-\_\-integer@{get\-\_\-integer}}
 \index{get\-\_\-integer@{get\-\_\-integer}!Big_Int@{Big\-\_\-\-Int}}
 \subsubsection[{get\-\_\-integer}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$($\ast$ get\-\_\-integer)(struct {\bf Big\-\_\-\-Int} $\ast$x)}}\label{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}
+an accesor function which returns the integer as a character array 
+
+Definition at line 23 of file big\-\_\-integer.\-h.
+
 \hypertarget{struct_big___int_ae06ba678ba07ecdac264605bc8576da2}{\index{Big\-\_\-\-Int@{Big\-\_\-\-Int}!get\-\_\-sign@{get\-\_\-sign}}
 \index{get\-\_\-sign@{get\-\_\-sign}!Big_Int@{Big\-\_\-\-Int}}
 \subsubsection[{get\-\_\-sign}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ get\-\_\-sign)(struct {\bf Big\-\_\-\-Int} $\ast$x)}}\label{struct_big___int_ae06ba678ba07ecdac264605bc8576da2}
+an accesor function which returns the sign as an integer value. 1 \-: positive and '0', 2\-: negative, 
+
+Definition at line 25 of file big\-\_\-integer.\-h.
+
 \hypertarget{struct_big___int_af78495b20eeda6242727ea99032693c2}{\index{Big\-\_\-\-Int@{Big\-\_\-\-Int}!integer@{integer}}
 \index{integer@{integer}!Big_Int@{Big\-\_\-\-Int}}
 \subsubsection[{integer}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf big\-\_\-integer}$\ast$ integer}}\label{struct_big___int_af78495b20eeda6242727ea99032693c2}
+an instances of the internal \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} type 
+
+Definition at line 21 of file big\-\_\-integer.\-h.
+
 \hypertarget{struct_big___int_a34a65fb8d8cc2acf5a14a18c420ee774}{\index{Big\-\_\-\-Int@{Big\-\_\-\-Int}!set\-\_\-integer@{set\-\_\-integer}}
 \index{set\-\_\-integer@{set\-\_\-integer}!Big_Int@{Big\-\_\-\-Int}}
 \subsubsection[{set\-\_\-integer}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ set\-\_\-integer)(struct {\bf Big\-\_\-\-Int} $\ast$this, char $\ast${\bf integer})}}\label{struct_big___int_a34a65fb8d8cc2acf5a14a18c420ee774}
+a function to set the integer value to the value in param 2 
+
+Definition at line 27 of file big\-\_\-integer.\-h.
+
 \hypertarget{struct_big___int_a70cf790b3af136aad25fa028cde3e801}{\index{Big\-\_\-\-Int@{Big\-\_\-\-Int}!set\-\_\-sign@{set\-\_\-sign}}
 \index{set\-\_\-sign@{set\-\_\-sign}!Big_Int@{Big\-\_\-\-Int}}
 \subsubsection[{set\-\_\-sign}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ set\-\_\-sign)(struct {\bf Big\-\_\-\-Int} $\ast$this, int sign)}}\label{struct_big___int_a70cf790b3af136aad25fa028cde3e801}
+a function to set sign to the value in param 2 
+
+Definition at line 29 of file big\-\_\-integer.\-h.
+
 
 
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}

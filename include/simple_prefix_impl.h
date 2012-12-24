@@ -1,5 +1,14 @@
+/*! \file simple_prefix_impl.h
+ *  \brief serves as the interface to the implementation of simple_prefix tree
+ *  This file contains functions required to support the encoding and de-coding functions.<br/> 
+ *  Author : Sidhartha Mani<br/>
+ *  Contact : sidharthamn@gmail.com <br/>
+ *  Last Updated : 23 Dec 2012 <br/>
+ *  \ingroup core 
+ */
+
 #ifndef SIMPLE_PREFIX_IMPL_H
-#define SIMPLE_PREFIX_IMPL_H
+#define SIMPLE_PREFIX_IMPL_H 
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -14,37 +23,129 @@
  5. Make sure tree construction probabilities for "ACTUAL" simple_prefix coding is modifiable
  */
 
-//writing simple_prefix codes only for lower case alphabets now, will write for the rest later
-//sorted based on letters occuring with highest frequency in words from the oxford dictionary - http://oxforddictionaries.com/words/what-is-the-frequency-of-the-letters-of-the-alphabet-in-english
+/*! \def LOWER_CASE_ALPHABETS 
+ *  \brief writing simple_prefix codes only for lower case alphabets now, will write for the rest later
+ *  The letters in the macro LOWER_CASE_ALPHABETS are sorted based on letters occuring with highest frequency 
+ *  in words from the oxford dictionary - http://oxforddictionaries.com/words/what-is-the-frequency-of-the-letters-of-the-alphabet-in-english
+ */
 #define LOWER_CASE_ALPHABETS "eariotnslcudpmhgbfywkvxzjq " // NOTE : White Space is also included
+
+/*! \def UPPER_CASE_ALPHABETS 
+ *  \brief the list of upper case alphabets, to be used later
+ */
 #define UPPER_CASE_ALPHABETS "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+/*! \def NUMBERS
+ *  \brief the list of numbers, to be used later
+ */
 #define NUMBERS "0123456789"
+
+/*! \def WHITE_SPACE
+ *  \brief white space character(depreceated). Already incorporated in LOWER_CASE_ALPHABETS
+ */
 #define WHITE_SPACE " "
+
+/*! \def NEW_LINE 
+ *  \brief new line character, to be used later
+ */
 #define NEW_LINE "\n"
+ 
+/*! \def PERIOD
+ *  \brief period character, to be used later
+ */
 #define PERIOD "."
+
+/*! \def COMMA
+ *  \brief comma character, to be used later
+ */
 #define COMMA ","
-//need to define for all printable characters
 
-
-//a node of a simple_prefix tree
+/*! \struct node
+ *  \brief a node of a simple_prefix tree
+ */
 typedef struct node
 {
-	char msg;
-    int is_leaf;
-    struct node *left_node;
-    struct node *right_node;
+	/*! The character that a node encodes, is saved as a msg in this variable*/
+	char msg; 
+	/*! Represents if the node is a leaf or not. If 0 it is not a leaf, If 1 it is a leaf */
+    int is_leaf; 
+	/*! The pointer to the left subtree */
+    struct node *left_node; 
+	/*! The pointer to the right subtree*/
+    struct node *right_node; 
 }node;
 
+/*! \fn node* init_simple_prefix()
+ *  \brief allocate memory for a new simple_prefix tree <br/>
+ *  <b>Precondition:</b> The structure should not have already been allocated memory <br/>
+ *  <b>Postcondition:</b> Memory is allocated and returned to the calling environment <br/>
+ *  \return A pointer to the allocated memory
+ */
 node* init_simple_prefix();
 
+/*! \fn node* construct_simple_prefix_tree(struct node *root, char *input_msgs,int size_of_input_msgs)
+ *  \brief construct a naive simple_prefix tree for a set of characters specified by input_msgs <br/>
+ *  <b> Precondition: </b> Root should have already been initialized <br/>
+ *  <b> Postcondition: </b> The Root is initialized to a simple prefix tree for all printable characters <br/>
+ *  \param root A pointer to the root of the tree. It is essentially a pointer to the entire tree.
+ *  \param input_msgs An array of characters for which the tree is being built. <br/> <b>Note :</b> The letters that occur
+ *  earlier in the input_msgs array will have a lower encoded length than the letters that occur later in the 
+ *  input_msgs array.
+ *  \param size_of_input_msgs The length of the input_msgs array
+ *  \return it returns the root of the constructed prefix tree
+ */
 node* construct_simple_prefix_tree(struct node *root, char *input_msgs,int size_of_input_msgs);
 
+/*! \fn char* simple_prefix_encode(char *msg, int size_of_msg)
+ * \brief encode a string based on the current simple_prefix tree, size_of_msgs(param 2) should be specified in bytes<br/>
+ * <b>Precondition :</b> The string into which the returned value should be captured should not have already been 
+ * allocated. Right now, the function can only encode characters defined in LOWER_CASE_ALPHABETS macro<br/>
+ * <b>Postcondition :</b> The message is encoded according to the simple_prefix algorithm and returned to the calling environment
+ * \param msg the string that needs to be encoded
+ * \param size_of_msg the length of the message
+ * \return a pointer to the encoded message. <br/>
+ * The returned encoded message is not in binary, it is still a character array. It can be converted into binary
+ * using char2bits(char *, int) function
+ */
 char* simple_prefix_encode(char *msg, int size_of_msg);
 
+/*! \fn char* simple_prefix_decode(char *encoded_string, struct node *root, int size_of_encoded_string)
+ *  \brief decode an encoded string by using the prefix tree generated by construct_simple_prefix(struct node*, char*, int)
+ *  The parameter 2 (struct node* root) is a pointer to the generated tree.<br/>
+ *  <b>Precondition :</b> The tree should have already been generated. The string capturing the return value should not
+ * have already been allocated memory<br/>
+ *  <b>Postcondition :</b> The encoded string is decoded and returned to the calling environment
+ * \param encoded_string the encoded string as an array of characters, not as binary data
+ * \param root the simple_prefix tree needed by the decoding algorithm
+ * \param size_of_encoded_string the size of the encoded string
+ * \return the decoded string
+ */
 char* simple_prefix_decode(char *encoded_string, struct node *root, int size_of_encoded_string);
 
+/*! /fn char* char2bits(char* encoded_string, int size_of_encoded_string)
+ *  \brief convert encoded character array into bits for reducing storage space. Use this on an encoded string 
+ *  before persisting this in a file or wherever<br/>
+ *  <b>Precondition :</b> The string capturing the return value should not
+ *  have already been allocated memory<br/>
+ *  <b>Postcondition :</b> The binary representation of the encoded string is returned as an array of bytes(char)
+ *  \param encoded_string The string to be converted into binary
+ *  \param size_of_encoded_string the size of the string in param 1
+ *  \return a bit stream containing the binary information encoded in param 1(encoded_string) 
+ */
 char* char2bits(char* encoded_string, int size_of_encoded_string);
 
+/*! /fn char* bits2char(char* bit_stream, int size_of_bit_stream)
+ *  \brief convert encoded bits(as binary data) into a character array for decoding. Use this whenever you read from a
+ *  persisted source.simple_prefix_decode(char*, struct node*, int) undersands
+ *  encoded strings in char format, not actual binary. Lots of improvement required in this function. Right now, it can
+ *  only work with the constraint of encoded string length being a multiple of 8.<br/>
+ *  <b>Precondition :</b> The string capturing the return value should not
+ *  have already been allocated memory<br/>
+ *  <b>Postcondition :</b> The character representation of the encoded binary string is returned as an array of bytes(char)
+ *  \param bit_stream bit stream containing the binary encoded information
+ *  \param size_of_bit_stream size of the bit_stream
+ *  \return an array of bytes(char) containing each bit of param 1(bit_stream) as a character, as required by simple_prefix_decode(char*, struct node*, int)
+ */
 char* bits2char(char* bit_stream, int size_of_bit_stream);
 
 

@@ -7,6 +7,6 @@ var big__integer__impl_8c =
     [ "init_big_integer_from_char", "big__integer__impl_8c.html#aa901ea9fc65455e5956685f79de483f5", null ],
     [ "init_big_integer_from_int", "big__integer__impl_8c.html#a4c0bcb12462f0ee91ab4e2a50648959d", null ],
     [ "init_big_integer_from_long", "big__integer__impl_8c.html#a2ea84ff52859d3887e65b120068c0158", null ],
-    [ "long_long_to_char", "big__integer__impl_8c.html#a8906be19bb42c9a4ac1cb54387ee01d0", null ],
-    [ "reverse_string", "big__integer__impl_8c.html#a8242235fbc1f6d24b8de1dda59b5c5cf", null ]
+    [ "long_long_to_char", "big__integer__impl_8c.html#ac9b89d7643e2d33ff43b6b19cf8e626c", null ],
+    [ "reverse_string", "big__integer__impl_8c.html#a3130b531d32e7ffd3a3c54592ff18476", null ]
 ];

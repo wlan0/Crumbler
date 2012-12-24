@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Huffman: /Users/sidharthamani/huffman_coder/include/simple_prefix_impl.h File Reference</title>
+<title>Crumbler: /Users/sidharthamani/huffman_coder/include/simple_prefix_impl.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,11 +26,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Crumpler_Logo.gif"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Huffman
+   <div id="projectname">Crumbler
    &#160;<span id="projectnumber">v0.1</span>
    </div>
-   <div id="projectbrief">An entry project to get accustomed to the world of compression and de-compression</div>
+   <div id="projectbrief">a multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability</div>
   </td>
  </tr>
  </tbody>
@@ -44,7 +45,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('simple__prefix__impl_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,79 +106,74 @@ $(document).ready(function(){initNavTree('simple__prefix__impl_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">simple_prefix_impl.h File Reference</div>  </div>
+<div class="title">simple_prefix_impl.h File Reference<div class="ingroups"><a class="el" href="group__core.html">Core</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>serves as the interface to the implementation of <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree This file contains functions required to support the encoding and de-coding functions.<br/>
+ Author : Sidhartha Mani<br/>
+ Contact : <a href="#" onclick="location.href='mai'+'lto:'+'sid'+'ha'+'rth'+'am'+'n@g'+'ma'+'il.'+'co'+'m'; return false;">sidha<span style="display: none;">.nosp@m.</span>rtha<span style="display: none;">.nosp@m.</span>mn@gm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a> <br/>
+ Last Updated : 23 Dec 2012 <br/>
+  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for simple_prefix_impl.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="simple__prefix__impl_8h__incl.png" border="0" usemap="#_2_users_2sidharthamani_2huffman__coder_2include_2simple__prefix__impl_8h" alt=""/></div>
-<map name="_2_users_2sidharthamani_2huffman__coder_2include_2simple__prefix__impl_8h" id="_2_users_2sidharthamani_2huffman__coder_2include_2simple__prefix__impl_8h">
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="simple__prefix__impl_8h__dep__incl.png" border="0" usemap="#_2_users_2sidharthamani_2huffman__coder_2include_2simple__prefix__impl_8hdep" alt=""/></div>
-<map name="_2_users_2sidharthamani_2huffman__coder_2include_2simple__prefix__impl_8hdep" id="_2_users_2sidharthamani_2huffman__coder_2include_2simple__prefix__impl_8hdep">
-</map>
-</div>
 </div>
 <p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode.html">node</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structnode"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#structnode">node</a></td></tr>
+<tr class="memdesc:structnode"><td class="mdescLeft">&#160;</td><td class="mdescRight">a node of a <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree  <a href="simple__prefix__impl_8h.html#structnode">More...</a><br/></td></tr>
+<tr class="separator:structnode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a94747a3d988297667d1f086be19a7f3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a94747a3d988297667d1f086be19a7f3d">LOWER_CASE_ALPHABETS</a>&#160;&#160;&#160;&quot;eariotnslcudpmhgbfywkvxzjq &quot;</td></tr>
+<tr class="memdesc:a94747a3d988297667d1f086be19a7f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">writing <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> codes only for lower case alphabets now, will write for the rest later The letters in the macro LOWER_CASE_ALPHABETS are sorted based on letters occuring with highest frequency in words from the oxford dictionary - <a href="http://oxforddictionaries.com/words/what-is-the-frequency-of-the-letters-of-the-alphabet-in-english">http://oxforddictionaries.com/words/what-is-the-frequency-of-the-letters-of-the-alphabet-in-english</a>  <a href="#a94747a3d988297667d1f086be19a7f3d"></a><br/></td></tr>
 <tr class="separator:a94747a3d988297667d1f086be19a7f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa462b833c678d200d3a76f3dc16d415c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#aa462b833c678d200d3a76f3dc16d415c">UPPER_CASE_ALPHABETS</a>&#160;&#160;&#160;&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</td></tr>
+<tr class="memdesc:aa462b833c678d200d3a76f3dc16d415c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the list of upper case alphabets, to be used later  <a href="#aa462b833c678d200d3a76f3dc16d415c"></a><br/></td></tr>
 <tr class="separator:aa462b833c678d200d3a76f3dc16d415c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52c6eed29863def7303121b65975e83b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a52c6eed29863def7303121b65975e83b">NUMBERS</a>&#160;&#160;&#160;&quot;0123456789&quot;</td></tr>
+<tr class="memdesc:a52c6eed29863def7303121b65975e83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">the list of numbers, to be used later  <a href="#a52c6eed29863def7303121b65975e83b"></a><br/></td></tr>
 <tr class="separator:a52c6eed29863def7303121b65975e83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca3321d60a25310d108cb125e8e639e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#aca3321d60a25310d108cb125e8e639e0">WHITE_SPACE</a>&#160;&#160;&#160;&quot; &quot;</td></tr>
+<tr class="memdesc:aca3321d60a25310d108cb125e8e639e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">white space character(depreceated). Already incorporated in LOWER_CASE_ALPHABETS  <a href="#aca3321d60a25310d108cb125e8e639e0"></a><br/></td></tr>
 <tr class="separator:aca3321d60a25310d108cb125e8e639e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b99dc1e1c86b4897498c2d436ead1b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5">NEW_LINE</a>&#160;&#160;&#160;&quot;\n&quot;</td></tr>
+<tr class="memdesc:a7b99dc1e1c86b4897498c2d436ead1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">new line character, to be used later  <a href="#a7b99dc1e1c86b4897498c2d436ead1b5"></a><br/></td></tr>
 <tr class="separator:a7b99dc1e1c86b4897498c2d436ead1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af281425e62298bac2df0fbe8690a4844"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#af281425e62298bac2df0fbe8690a4844">PERIOD</a>&#160;&#160;&#160;&quot;.&quot;</td></tr>
+<tr class="memdesc:af281425e62298bac2df0fbe8690a4844"><td class="mdescLeft">&#160;</td><td class="mdescRight">period character, to be used later  <a href="#af281425e62298bac2df0fbe8690a4844"></a><br/></td></tr>
 <tr class="separator:af281425e62298bac2df0fbe8690a4844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f49001be13949a16a57e6c99ab00ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#aa2f49001be13949a16a57e6c99ab00ad">COMMA</a>&#160;&#160;&#160;&quot;,&quot;</td></tr>
+<tr class="memdesc:aa2f49001be13949a16a57e6c99ab00ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">comma character, to be used later  <a href="#aa2f49001be13949a16a57e6c99ab00ad"></a><br/></td></tr>
 <tr class="separator:aa2f49001be13949a16a57e6c99ab00ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:af4aeda155dbe167f1c1cf38cb65bf324"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structnode.html">node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#af4aeda155dbe167f1c1cf38cb65bf324">node</a></td></tr>
-<tr class="separator:af4aeda155dbe167f1c1cf38cb65bf324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af8da3d9dd76b4948b2233ed801729904"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnode.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#af8da3d9dd76b4948b2233ed801729904">init_simple_prefix</a> ()</td></tr>
-<tr class="memdesc:af8da3d9dd76b4948b2233ed801729904"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate memory for a new <a class="el" href="structsimple__prefix.html">simple_prefix</a> tree <br/>
+<tr class="memitem:af8da3d9dd76b4948b2233ed801729904"><td class="memItemLeft" align="right" valign="top"><a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#af8da3d9dd76b4948b2233ed801729904">init_simple_prefix</a> ()</td></tr>
+<tr class="memdesc:af8da3d9dd76b4948b2233ed801729904"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate memory for a new <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree <br/>
  <b>Precondition:</b> The structure should not have already been allocated memory <br/>
  <b>Postcondition:</b> Memory is allocated and returned to the calling environment <br/>
   <a href="#af8da3d9dd76b4948b2233ed801729904"></a><br/></td></tr>
 <tr class="separator:af8da3d9dd76b4948b2233ed801729904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2803bf8d5b507d080053c5795f1f2e8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnode.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a2803bf8d5b507d080053c5795f1f2e8e">construct_simple_prefix_tree</a> (struct <a class="el" href="structnode.html">node</a> *root, char *input_msgs, int size_of_input_msgs)</td></tr>
-<tr class="memdesc:a2803bf8d5b507d080053c5795f1f2e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a naive <a class="el" href="structsimple__prefix.html">simple_prefix</a> tree for a set of characters specified by input_msgs <br/>
+<tr class="memitem:a2803bf8d5b507d080053c5795f1f2e8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a2803bf8d5b507d080053c5795f1f2e8e">construct_simple_prefix_tree</a> (struct <a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *root, char *input_msgs, int size_of_input_msgs)</td></tr>
+<tr class="memdesc:a2803bf8d5b507d080053c5795f1f2e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a naive <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree for a set of characters specified by input_msgs <br/>
  <b> Precondition: </b> Root should have already been initialized <br/>
  <b> Postcondition: </b> The Root is initialized to a simple prefix tree for all printable characters <br/>
   <a href="#a2803bf8d5b507d080053c5795f1f2e8e"></a><br/></td></tr>
 <tr class="separator:a2803bf8d5b507d080053c5795f1f2e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d974ca63f3322d8a7d444c6ebbf6212"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a1d974ca63f3322d8a7d444c6ebbf6212">simple_prefix_encode</a> (char *msg, int size_of_msg)</td></tr>
-<tr class="memdesc:a1d974ca63f3322d8a7d444c6ebbf6212"><td class="mdescLeft">&#160;</td><td class="mdescRight">encode a string based on the current <a class="el" href="structsimple__prefix.html">simple_prefix</a> tree, size_of_msgs(param 2) should be specified in bytes<br/>
+<tr class="memdesc:a1d974ca63f3322d8a7d444c6ebbf6212"><td class="mdescLeft">&#160;</td><td class="mdescRight">encode a string based on the current <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree, size_of_msgs(param 2) should be specified in bytes<br/>
  <b>Precondition :</b> The string into which the returned value should be captured should not have already been allocated. Right now, the function can only encode characters defined in LOWER_CASE_ALPHABETS macro<br/>
- <b>Postcondition :</b> The message is encoded according to the <a class="el" href="structsimple__prefix.html">simple_prefix</a> algorithm and returned to the calling environment  <a href="#a1d974ca63f3322d8a7d444c6ebbf6212"></a><br/></td></tr>
+ <b>Postcondition :</b> The message is encoded according to the <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> algorithm and returned to the calling environment  <a href="#a1d974ca63f3322d8a7d444c6ebbf6212"></a><br/></td></tr>
 <tr class="separator:a1d974ca63f3322d8a7d444c6ebbf6212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01c7baaef3398c045f127558eeef0b14"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a01c7baaef3398c045f127558eeef0b14">simple_prefix_decode</a> (char *encoded_string, struct <a class="el" href="structnode.html">node</a> *root, int size_of_encoded_string)</td></tr>
+<tr class="memitem:a01c7baaef3398c045f127558eeef0b14"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a01c7baaef3398c045f127558eeef0b14">simple_prefix_decode</a> (char *encoded_string, struct <a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *root, int size_of_encoded_string)</td></tr>
 <tr class="memdesc:a01c7baaef3398c045f127558eeef0b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode an encoded string by using the prefix tree generated by construct_simple_prefix(struct node*, char*, int) The parameter 2 (struct node* root) is a pointer to the generated tree.<br/>
  <b>Precondition :</b> The tree should have already been generated. The string capturing the return value should not have already been allocated memory<br/>
  <b>Postcondition :</b> The encoded string is decoded and returned to the calling environment  <a href="#a01c7baaef3398c045f127558eeef0b14"></a><br/></td></tr>
@@ -192,6 +189,57 @@ Functions</h2></td></tr>
  <b>Postcondition :</b> The character representation of the encoded binary string is returned as an array of bytes(char)  <a href="#adbcb96421197815cdb34df33d65839c8"></a><br/></td></tr>
 <tr class="separator:adbcb96421197815cdb34df33d65839c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>serves as the interface to the implementation of <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree This file contains functions required to support the encoding and de-coding functions.<br/>
+ Author : Sidhartha Mani<br/>
+ Contact : <a href="#" onclick="location.href='mai'+'lto:'+'sid'+'ha'+'rth'+'am'+'n@g'+'ma'+'il.'+'co'+'m'; return false;">sidha<span style="display: none;">.nosp@m.</span>rtha<span style="display: none;">.nosp@m.</span>mn@gm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a> <br/>
+ Last Updated : 23 Dec 2012 <br/>
+ </p>
+
+<p>Definition in file <a class="el" href="">simple_prefix_impl.h</a>.</p>
+</div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structnode" id="structnode"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct node</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>a node of a <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree </p>
+
+<p>Definition at line <a class="el" href="#L66">66</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad066657fe1374fb9852c285175a3774f"></a>int</td>
+<td class="fieldname">
+is_leaf</td>
+<td class="fielddoc">
+Represents if the node is a leaf or not. If 0 it is not a leaf, If 1 it is a leaf </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a43dd3cf499d5b2270fcfbb29eb0a0d66"></a>struct <a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *</td>
+<td class="fieldname">
+left_node</td>
+<td class="fielddoc">
+The pointer to the left subtree </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad80e777cd260fdd5ca6ad3f25b5e76de"></a>char</td>
+<td class="fieldname">
+msg</td>
+<td class="fielddoc">
+The character that a node encodes, is saved as a msg in this variable </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="af729d9e66cefdd8c0a114cb0da5f7b7c"></a>struct <a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *</td>
+<td class="fieldname">
+right_node</td>
+<td class="fielddoc">
+The pointer to the right subtree </td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="aa2f49001be13949a16a57e6c99ab00ad"></a>
 <div class="memitem">
@@ -202,6 +250,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>comma character, to be used later </p>
+
+<p>Definition at line <a class="el" href="#L61">61</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
 
 </div>
 </div>
@@ -215,6 +267,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>writing <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> codes only for lower case alphabets now, will write for the rest later The letters in the macro LOWER_CASE_ALPHABETS are sorted based on letters occuring with highest frequency in words from the oxford dictionary - <a href="http://oxforddictionaries.com/words/what-is-the-frequency-of-the-letters-of-the-alphabet-in-english">http://oxforddictionaries.com/words/what-is-the-frequency-of-the-letters-of-the-alphabet-in-english</a> </p>
+
+<p>Definition at line <a class="el" href="#L31">31</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7b99dc1e1c86b4897498c2d436ead1b5"></a>
@@ -226,6 +282,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>new line character, to be used later </p>
+
+<p>Definition at line <a class="el" href="#L51">51</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
 
 </div>
 </div>
@@ -239,6 +299,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>the list of numbers, to be used later </p>
+
+<p>Definition at line <a class="el" href="#L41">41</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af281425e62298bac2df0fbe8690a4844"></a>
@@ -250,6 +314,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>period character, to be used later </p>
+
+<p>Definition at line <a class="el" href="#L56">56</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
 
 </div>
 </div>
@@ -263,6 +331,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>the list of upper case alphabets, to be used later </p>
+
+<p>Definition at line <a class="el" href="#L36">36</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aca3321d60a25310d108cb125e8e639e0"></a>
@@ -275,18 +347,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="af4aeda155dbe167f1c1cf38cb65bf324"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structnode.html">node</a> <a class="el" href="structnode.html">node</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>white space character(depreceated). Already incorporated in LOWER_CASE_ALPHABETS </p>
+
+<p>Definition at line <a class="el" href="#L46">46</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
 
 </div>
 </div>
@@ -327,6 +390,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an array of bytes(char) containing each bit of param 1(bit_stream) as a character, as required by <a class="el" href="simple__prefix__impl_8c.html#a40ee92d324331ee4ca644e67d3697f58" title="decode an encoded string by using the prefix tree generated by construct_simple_prefix(struct node*...">simple_prefix_decode(char*, struct node*, int)</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="#L240">240</a> of file <a class="el" href="">simple_prefix_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keywordtype">char</span> *encoded_string = (<span class="keywordtype">char</span> *)malloc(strlen(bit_stream)*8 + 1);</div>
 <div class="line">    <span class="keywordtype">int</span> i = 0;</div>
@@ -391,6 +456,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a bit stream containing the binary information encoded in param 1(encoded_string) </dd></dl>
+
+<p>Definition at line <a class="el" href="#L209">209</a> of file <a class="el" href="">simple_prefix_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keywordtype">char</span> *bit_stream = (<span class="keywordtype">char</span> *)malloc(size_of_encoded_string/8 + 2);</div>
 <div class="line">    <span class="keywordtype">char</span> bit = 0;</div>
@@ -416,9 +483,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnode.html">node</a> * construct_simple_prefix_tree </td>
+          <td class="memname"><a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> * construct_simple_prefix_tree </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structnode.html">node</a> *&#160;</td>
+          <td class="paramtype">struct <a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *&#160;</td>
           <td class="paramname"><em>root</em>, </td>
         </tr>
         <tr>
@@ -441,7 +508,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>construct a naive <a class="el" href="structsimple__prefix.html">simple_prefix</a> tree for a set of characters specified by input_msgs <br/>
+<p>construct a naive <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree for a set of characters specified by input_msgs <br/>
  <b> Precondition: </b> Root should have already been initialized <br/>
  <b> Postcondition: </b> The Root is initialized to a simple prefix tree for all printable characters <br/>
  </p>
@@ -450,52 +517,60 @@ Functions</h2></td></tr>
     <tr><td class="paramname">root</td><td>A pointer to the root of the tree. It is essentially a pointer to the entire tree. </td></tr>
     <tr><td class="paramname">input_msgs</td><td>An array of characters for which the tree is being built. <br/>
  <b>Note :</b> The letters that occur earlier in the input_msgs array will have a lower encoded length than the letters that occur later in the input_msgs array. </td></tr>
-    <tr><td class="paramname">size_of_input_msgs</td><td>The length of the input_msgs array. </td></tr>
+    <tr><td class="paramname">size_of_input_msgs</td><td>The length of the input_msgs array </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>it returns the root of the constructed prefix tree </dd></dl>
+
+<p>Definition at line <a class="el" href="#L47">47</a> of file <a class="el" href="">simple_prefix_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="comment">//definition : Naive simple_prefix tree  -  a simple_prefix tree that is constructed without considering</span></div>
+<div class="line">    <span class="comment">//the probabilites of messages. A lower length prefix code is given to a message </span></div>
+<div class="line">    <span class="comment">//if it occurs before another message while processing. That is, a msg whose index is lower</span></div>
+<div class="line">    <span class="comment">//in the input_msgs array will have a shorter prefix code than a msg that has a higher array </span></div>
+<div class="line">    <span class="comment">//index</span></div>
 <div class="line">    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line">    <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *temp =  root;</div>
+<div class="line">    <span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *temp =  root;</div>
 <div class="line">    <span class="keywordflow">for</span> (i = 0; i&lt;size_of_input_msgs; i++) </div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">while</span> (temp-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> != NULL) </div>
+<div class="line">        <span class="keywordflow">while</span> (temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> != NULL) </div>
 <div class="line">        {</div>
-<div class="line">            temp = temp-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a>;</div>
+<div class="line">            temp = temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a>;</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> == NULL &amp;&amp; temp == root) </div>
+<div class="line">        <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> == NULL &amp;&amp; temp == root) </div>
 <div class="line">        {</div>
-<div class="line">            <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *new_node = (<span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode.html">node</a>));</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = input_msgs[i];</div>
-<div class="line">            temp-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = new_node;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
+<div class="line">            <span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *new_node = (<span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a>));</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = input_msgs[i];</div>
+<div class="line">            temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = new_node;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> == NULL &amp;&amp; temp == root) </div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> == NULL &amp;&amp; temp == root) </div>
 <div class="line">        {</div>
-<div class="line">            <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *new_node = (<span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode.html">node</a>));</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = input_msgs[i];</div>
-<div class="line">            temp-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = new_node;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
+<div class="line">            <span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *new_node = (<span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a>));</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = input_msgs[i];</div>
+<div class="line">            temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = new_node;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> == NULL)</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> == NULL)</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *new_node = (<span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode.html">node</a>));</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = temp-&gt;<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>;</div>
-<div class="line">            temp-&gt;<a class="code" href="structnode.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 0;</div>
-<div class="line">            temp-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = new_node;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
-<div class="line">            new_node-&gt;<a class="code" href="structnode.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
-<div class="line">            <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *new_node_2 = (<span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode.html">node</a>));</div>
-<div class="line">            temp-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = new_node_2;</div>
-<div class="line">            new_node_2-&gt;<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = input_msgs[i];</div>
-<div class="line">            new_node_2-&gt;<a class="code" href="structnode.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
-<div class="line">            new_node_2-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
-<div class="line">            new_node_2-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
+<div class="line">            <span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *new_node = (<span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a>));</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>;</div>
+<div class="line">            temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 0;</div>
+<div class="line">            temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = new_node;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
+<div class="line">            new_node-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
+<div class="line">            <span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *new_node_2 = (<span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a>));</div>
+<div class="line">            temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = new_node_2;</div>
+<div class="line">            new_node_2-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a> = input_msgs[i];</div>
+<div class="line">            new_node_2-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 1;</div>
+<div class="line">            new_node_2-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
+<div class="line">            new_node_2-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> root;</div>
@@ -508,7 +583,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnode.html">node</a> * init_simple_prefix </td>
+          <td class="memname"><a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> * init_simple_prefix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -516,16 +591,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>allocate memory for a new <a class="el" href="structsimple__prefix.html">simple_prefix</a> tree <br/>
+<p>allocate memory for a new <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree <br/>
  <b>Precondition:</b> The structure should not have already been allocated memory <br/>
  <b>Postcondition:</b> Memory is allocated and returned to the calling environment <br/>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory </dd></dl>
+
+<p>Definition at line <a class="el" href="#L26">26</a> of file <a class="el" href="">simple_prefix_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *root = (<span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode.html">node</a>));</div>
-<div class="line">    root-&gt;<a class="code" href="structnode.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 0;</div>
-<div class="line">    root-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
-<div class="line">    root-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
+<div class="line">    <span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *root = (<span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a>));</div>
+<div class="line">    root-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> = 0;</div>
+<div class="line">    root-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a> = NULL;</div>
+<div class="line">    root-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a> = NULL;</div>
 <div class="line">    <span class="keywordflow">return</span> root;</div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -544,7 +621,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structnode.html">node</a> *&#160;</td>
+          <td class="paramtype">struct <a class="el" href="simple__prefix__impl_8h.html#structnode">node</a> *&#160;</td>
           <td class="paramname"><em>root</em>, </td>
         </tr>
         <tr>
@@ -567,34 +644,36 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">encoded_string</td><td>the encoded string as an array of characters, not as binary data </td></tr>
-    <tr><td class="paramname">root</td><td>the <a class="el" href="structsimple__prefix.html">simple_prefix</a> tree needed by the decoding algorithm </td></tr>
+    <tr><td class="paramname">root</td><td>the <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree needed by the decoding algorithm </td></tr>
     <tr><td class="paramname">size_of_encoded_string</td><td>the size of the encoded string </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the decoded string </dd></dl>
+
+<p>Definition at line <a class="el" href="#L170">170</a> of file <a class="el" href="">simple_prefix_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keywordtype">char</span> *decoded_string = (<span class="keywordtype">char</span> *)malloc(size_of_encoded_string);</div>
 <div class="line">    <span class="keywordtype">int</span> i = 0;</div>
 <div class="line">    <span class="keywordtype">int</span> j = 0;</div>
-<div class="line">    <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> *temp;</div>
+<div class="line">    <span class="keyword">struct </span><a class="code" href="simple__prefix__impl_8h.html#structnode" title="a node of a simple_prefix tree">node</a> *temp;</div>
 <div class="line">    <span class="keywordflow">while</span>(i &lt; size_of_encoded_string)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">//iterate through each node until you reach the encoded character</span></div>
 <div class="line">        temp = root;</div>
-<div class="line">        <span class="keywordflow">while</span>(temp-&gt;<a class="code" href="structnode.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> != 1 &amp;&amp; i &lt; size_of_encoded_string)</div>
+<div class="line">        <span class="keywordflow">while</span>(temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">is_leaf</a> != 1 &amp;&amp; i &lt; size_of_encoded_string)</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span>(encoded_string[i] == <span class="charliteral">&#39;0&#39;</span>)</div>
 <div class="line">            {</div>
-<div class="line">                temp = temp-&gt;<a class="code" href="structnode.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a>;</div>
+<div class="line">                temp = temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">left_node</a>;</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">else</span></div>
 <div class="line">            {</div>
-<div class="line">                temp = temp-&gt;<a class="code" href="structnode.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a>;</div>
+<div class="line">                temp = temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">right_node</a>;</div>
 <div class="line">            }</div>
 <div class="line">            i++;</div>
 <div class="line">        }</div>
-<div class="line">        decoded_string[j++] = temp-&gt;<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>;</div>
+<div class="line">        decoded_string[j++] = temp-&gt;<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">//finish the string</span></div>
 <div class="line">    decoded_string[j] = <span class="charliteral">&#39;\0&#39;</span>;</div>
@@ -627,9 +706,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>encode a string based on the current <a class="el" href="structsimple__prefix.html">simple_prefix</a> tree, size_of_msgs(param 2) should be specified in bytes<br/>
+<p>encode a string based on the current <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree, size_of_msgs(param 2) should be specified in bytes<br/>
  <b>Precondition :</b> The string into which the returned value should be captured should not have already been allocated. Right now, the function can only encode characters defined in LOWER_CASE_ALPHABETS macro<br/>
- <b>Postcondition :</b> The message is encoded according to the <a class="el" href="structsimple__prefix.html">simple_prefix</a> algorithm and returned to the calling environment </p>
+ <b>Postcondition :</b> The message is encoded according to the <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> algorithm and returned to the calling environment </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>the string that needs to be encoded </td></tr>
@@ -639,6 +718,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the encoded message. <br/>
  The returned encoded message is not in binary, it is still a character array. It can be converted into binary using <a class="el" href="simple__prefix__impl_8c.html#ac7b35ccc6d71b9a01d2ab3609e20e698" title="convert encoded character array into bits for reducing storage space. Use this on an encoded string b...">char2bits(char *, int)</a> function </dd></dl>
+
+<p>Definition at line <a class="el" href="#L112">112</a> of file <a class="el" href="">simple_prefix_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keywordtype">char</span> conversion_tree[][27] = {</div>
 <div class="line">        <span class="stringliteral">&quot;1&quot;</span>, <span class="comment">//e</span></div>
@@ -671,15 +752,15 @@ Functions</h2></td></tr>
 <div class="line">    };</div>
 <div class="line">    <span class="keywordtype">char</span> *encoded_string = (<span class="keywordtype">char</span> *)malloc(27*size_of_msg);</div>
 <div class="line">    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line">    <span class="keywordtype">char</span> reference_string[] = <a class="code" href="simple__prefix__impl_8h.html#a94747a3d988297667d1f086be19a7f3d">LOWER_CASE_ALPHABETS</a>;</div>
+<div class="line">    <span class="keywordtype">char</span> reference_string[] = <a class="code" href="simple__prefix__impl_8h.html#a94747a3d988297667d1f086be19a7f3d" title="writing simple_prefix codes only for lower case alphabets now, will write for the rest later The lett...">LOWER_CASE_ALPHABETS</a>;</div>
 <div class="line">    <span class="keywordflow">while</span> (i &lt; size_of_msg) </div>
 <div class="line">    {</div>
 <div class="line">    <span class="comment">//ignore un-recognized characters</span></div>
-<div class="line">    <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)((strchr(reference_string,<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>[i])) - reference_string) &lt; 0 || (int)((strchr(reference_string,<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>[i])) - reference_string) &gt; 26) {</div>
+<div class="line">    <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)((strchr(reference_string,<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>[i])) - reference_string) &lt; 0 || (int)((strchr(reference_string,<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>[i])) - reference_string) &gt; 26) {</div>
 <div class="line">        i++;</div>
 <div class="line">        <span class="keywordflow">continue</span>;</div>
 <div class="line">    }</div>
-<div class="line">    encoded_string = strcat(encoded_string,conversion_tree[(<span class="keywordtype">int</span>)((strchr(reference_string,<a class="code" href="structnode.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>[i])) - reference_string)]);</div>
+<div class="line">    encoded_string = strcat(encoded_string,conversion_tree[(<span class="keywordtype">int</span>)((strchr(reference_string,<a class="code" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">msg</a>[i])) - reference_string)]);</div>
 <div class="line">    i++;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> encoded_string;</div>
@@ -693,7 +774,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="simple__prefix__impl_8h.html">simple_prefix_impl.h</a></li>
-    <li class="footer">Generated on Sun Dec 23 2012 22:16:14 for Huffman by
+    <li class="footer">Generated on Mon Dec 24 2012 18:01:45 for Crumbler by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

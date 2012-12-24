@@ -1,3 +1,10 @@
+/*! \file simple_prefix_encoder.c  
+ *  \brief A sample implementation of simple prefix decoding using crumbler library <br/>
+ *  Author : Sidhartha Mani <br/>
+ *  Contact : sidharthamn@gmail.com <br/>
+ *  Last updated on : 24 Dec 2012
+ *  \ingroup samples
+ */
 #include "simple_prefix.h"
 #include<stdio.h>
 

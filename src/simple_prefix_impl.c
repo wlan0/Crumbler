@@ -5,6 +5,7 @@
  * Author : Sidhartha Mani<br/>
  * Contact : sidharthamn@gmail.com <br/>
  * Last Updated : 23 Dec 2012 <br/>
+ * \ingroup core 
  */
 
 //CURRENT_TASK : USE A STANDARD PAGE SIZE AND A STRUCTURE FOR ENCODED STRING
@@ -31,11 +32,6 @@ node* init_simple_prefix()
  	return root;
 }
 
-//definition : Naive simple_prefix tree  -  a simple_prefix tree that is constructed without considering
-//the probabilites of messages. A lower length prefix code is given to a message 
-//if it occurs before another message while processing. That is, a msg whose index is lower
-//in the input_msgs array will have a shorter prefix code than a msg that has a higher array 
-//index
 
 /*! \fn node* construct_simple_prefix_tree(struct node *root, char *input_msgs,int size_of_input_msgs)
  *  \brief construct a naive simple_prefix tree for a set of characters specified by input_msgs <br/>
@@ -45,10 +41,16 @@ node* init_simple_prefix()
  *  \param input_msgs An array of characters for which the tree is being built. <br/> <b>Note :</b> The letters that occur
  *  earlier in the input_msgs array will have a lower encoded length than the letters that occur later in the 
  *  input_msgs array.
- *  \param size_of_input_msgs The length of the input_msgs array.
+ *  \param size_of_input_msgs The length of the input_msgs array
+ *  \return it returns the root of the constructed prefix tree
  */
 node* construct_simple_prefix_tree(struct node *root, char *input_msgs,int size_of_input_msgs)
 {
+	//definition : Naive simple_prefix tree  -  a simple_prefix tree that is constructed without considering
+	//the probabilites of messages. A lower length prefix code is given to a message 
+	//if it occurs before another message while processing. That is, a msg whose index is lower
+	//in the input_msgs array will have a shorter prefix code than a msg that has a higher array 
+	//index
 	int i = 0;
 	struct node *temp =  root;
 	for (i = 0; i<size_of_input_msgs; i++) 

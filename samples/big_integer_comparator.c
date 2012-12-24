@@ -1,3 +1,11 @@
+/*! \file big_integer_comparator.c
+ *  \brief A sample implementation of big_integer comparison using crumbler library <br/>
+ *  Author : Sidhartha Mani <br/>
+ *  Contact : sidharthamn@gmail.com <br/>
+ *  Last updated on : 24 Dec 2012
+ *  \ingroup samples
+ */
+
 #include "big_integer.h"
 
 int main()
