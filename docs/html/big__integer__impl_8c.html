@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Crumbler: /Users/sidharthamani/huffman_coder/src/big_integer_impl.c File Reference</title>
+<title>Crumbler: /Users/sidharthamani/Crumbler/src/big_integer_impl.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,12 +26,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Crumpler_Logo.gif"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Crumpler_Logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Crumbler
    &#160;<span id="projectnumber">v0.1</span>
    </div>
-   <div id="projectbrief">a multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability</div>
+   <div id="projectbrief">a cloud based multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability</div>
   </td>
  </tr>
  </tbody>
@@ -117,6 +117,13 @@ $(document).ready(function(){initNavTree('big__integer__impl_8c.html','');});
   
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="">big_integer_impl.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for big_integer_impl.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="big__integer__impl_8c__incl.png" border="0" usemap="#_2_users_2sidharthamani_2_crumbler_2src_2big__integer__impl_8c" alt=""/></div>
+<map name="_2_users_2sidharthamani_2_crumbler_2src_2big__integer__impl_8c" id="_2_users_2sidharthamani_2_crumbler_2src_2big__integer__impl_8c">
+<area shape="rect" id="node3" href="big__integer__impl_8h.html" title="The interface to the implementation of big_integer logic This file contains functions required to sup..." alt="" coords="56,115,185,143"/></map>
+</div>
 </div>
 <p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -154,8 +161,8 @@ Functions</h2></td></tr>
  <b> Postcondition: </b> memory is allocated and initialized before returning to the calling environment  <a href="#aa901ea9fc65455e5956685f79de483f5"></a><br/></td></tr>
 <tr class="separator:aa901ea9fc65455e5956685f79de483f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12e0894b8887892194604e1217fe2afd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="big__integer__impl_8c.html#a12e0894b8887892194604e1217fe2afd">compare_big_integers</a> (struct <a class="el" href="big__integer__impl_8h.html#structbig__integer">big_integer</a> *operand1, struct <a class="el" href="big__integer__impl_8h.html#structbig__integer">big_integer</a> *operand2)</td></tr>
-<tr class="memdesc:a12e0894b8887892194604e1217fe2afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">compares two positive integers only <br/>
- <b> Precondition: </b> the numbers being compared should both be positive <br/>
+<tr class="memdesc:a12e0894b8887892194604e1217fe2afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">compares any two big_integer(s) <br/>
+ <b> Precondition: </b> the numbers being compared should have their signs set to 1 or -1<br/>
  <b> Postcondition: </b>The comparison result is returned  <a href="#a12e0894b8887892194604e1217fe2afd"></a><br/></td></tr>
 <tr class="separator:a12e0894b8887892194604e1217fe2afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba3732c4704a6c73493683133fcd9cae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="big__integer__impl_8c.html#aba3732c4704a6c73493683133fcd9cae">destroy_big_integer</a> (<a class="el" href="big__integer__impl_8h.html#structbig__integer">big_integer</a> *obj)</td></tr>
@@ -219,9 +226,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the <a class="el" href="big__integer__impl_8h.html#structbig__integer" title="a struct to hold big integer values">big_integer</a> holding the sum </dd></dl>
 
-<p>Definition at line <a class="el" href="#L171">171</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
+<p>Definition at line <a class="el" href="#L184">184</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keywordtype">int</span> larger=(<a class="code" href="big__integer__impl_8h.html#a12e0894b8887892194604e1217fe2afd" title="compares two positive integers only    Precondition:  the numbers being compared should both be posit...">compare_big_integers</a>(operand1,operand2)&gt;=0)?1:2;</div>
+<div class="line">    <span class="keywordtype">int</span> larger=(<a class="code" href="big__integer__impl_8h.html#a12e0894b8887892194604e1217fe2afd" title="compares any two big_integer(s)    Precondition:  the numbers being compared should have their signs ...">compare_big_integers</a>(operand1,operand2)&gt;=0)?1:2;</div>
 <div class="line">    <span class="keywordtype">char</span> new_value[larger==1?strlen(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)+2:strlen(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)+2];</div>
 <div class="line">    new_value[0] = <span class="charliteral">&#39;0&#39;</span>;</div>
 <div class="line">    new_value[<span class="keyword">sizeof</span>(new_value) - 1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
@@ -288,8 +295,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>compares two positive integers only <br/>
- <b> Precondition: </b> the numbers being compared should both be positive <br/>
+<p>compares any two big_integer(s) <br/>
+ <b> Precondition: </b> the numbers being compared should have their signs set to 1 or -1<br/>
  <b> Postcondition: </b>The comparison result is returned </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -303,13 +310,25 @@ Functions</h2></td></tr>
  Returns &gt; 0 : if first value is larger <br/>
  Returns &lt; 0 : if first value is smaller </dd></dl>
 
-<p>Definition at line <a class="el" href="#L141">141</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
+<p>Definition at line <a class="el" href="#L142">142</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span>(strlen(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>) != strlen(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>))</div>
+<div class="line">    <span class="keywordflow">if</span> (operand1-&gt;<a class="code" href="big__integer__impl_8h.html#abbeb8ae63622a7fef0b5a56bb91a1682">sign</a> == 1 &amp;&amp; operand2-&gt;<a class="code" href="big__integer__impl_8h.html#abbeb8ae63622a7fef0b5a56bb91a1682">sign</a> == 1) </div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> (strlen(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)&gt;strlen(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)?1:-1);</div>
+<div class="line">        <span class="keywordflow">if</span>(strlen(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>) != strlen(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>))</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> (strlen(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)&gt;strlen(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)?1:-1);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> strcmp(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>,operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>);</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> strcmp(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>,operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>);</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#abbeb8ae63622a7fef0b5a56bb91a1682">sign</a> == -1 &amp;&amp; operand2-&gt;<a class="code" href="big__integer__impl_8h.html#abbeb8ae63622a7fef0b5a56bb91a1682">sign</a> == -1)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span>(strlen(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>) != strlen(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>))</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> (strlen(operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)&gt;strlen(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>)?-1:1);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> strcmp(operand2-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>,operand1-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> (operand1-&gt;<a class="code" href="big__integer__impl_8h.html#abbeb8ae63622a7fef0b5a56bb91a1682">sign</a> == 1)?1:-1;</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -339,7 +358,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing </dd></dl>
 
-<p>Definition at line <a class="el" href="#L157">157</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
+<p>Definition at line <a class="el" href="#L170">170</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    free(obj-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>);</div>
 <div class="line">    free(obj);</div>
@@ -369,6 +388,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keyword">struct </span><a class="code" href="big__integer__impl_8h.html#structbig__integer" title="a struct to hold big integer values">big_integer</a> *temp = (<span class="keyword">struct </span><a class="code" href="big__integer__impl_8h.html#structbig__integer" title="a struct to hold big integer values">big_integer</a>*)malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="big__integer__impl_8h.html#structbig__integer" title="a struct to hold big integer values">big_integer</a>));</div>
 <div class="line">    temp-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a> = NULL;</div>
+<div class="line">    temp-&gt;<a class="code" href="big__integer__impl_8h.html#abbeb8ae63622a7fef0b5a56bb91a1682">sign</a> = 1;</div>
 <div class="line">    <span class="keywordflow">return</span> temp;</div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -399,7 +419,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the allocated and initialized memory </dd></dl>
 
-<p>Definition at line <a class="el" href="#L104">104</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
+<p>Definition at line <a class="el" href="#L105">105</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> i = strlen(<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>);</div>
 <div class="line">    <span class="comment">//check for non-numbers</span></div>
@@ -452,7 +472,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the allocated and initialized memory </dd></dl>
 
-<p>Definition at line <a class="el" href="#L91">91</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
+<p>Definition at line <a class="el" href="#L92">92</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="big__integer__impl_8h.html#a1329d3ba57def63a30fa2244a547eb29" title="allocates memory for a new big_integer structure and returns a pointer to the allocated memory and in...">init_big_integer_from_long</a>((<span class="keywordtype">long</span> <span class="keywordtype">long</span>)int_value);</div>
 <div class="line">}</div>
@@ -484,7 +504,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the allocated and initialized memory </dd></dl>
 
-<p>Definition at line <a class="el" href="#L75">75</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
+<p>Definition at line <a class="el" href="#L76">76</a> of file <a class="el" href="">big_integer_impl.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keyword">struct </span><a class="code" href="big__integer__impl_8h.html#structbig__integer" title="a struct to hold big integer values">big_integer</a> *temp = <a class="code" href="big__integer__impl_8h.html#ad427e9cea709aee7a823b0136216fbfc" title="allocates memory for a new big_integer structure and returns a pointer to the allocated memory    Pre...">init_big_integer</a>();</div>
 <div class="line">    temp-&gt;<a class="code" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a> = <a class="code" href="big__integer__impl_8c.html#ac9b89d7643e2d33ff43b6b19cf8e626c" title="converts any positive long long integer into its character representation    Precondition:  the strin...">long_long_to_char</a>(long_long_value);</div>
@@ -582,7 +602,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="big__integer__impl_8c.html">big_integer_impl.c</a></li>
-    <li class="footer">Generated on Mon Dec 24 2012 18:01:45 for Crumbler by
+    <li class="footer">Generated on Wed Jan 2 2013 10:49:21 for Crumbler by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

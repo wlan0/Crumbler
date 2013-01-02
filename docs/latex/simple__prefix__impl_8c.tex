@@ -1,5 +1,5 @@
-\hypertarget{simple__prefix__impl_8c}{\section{/\-Users/sidharthamani/huffman\-\_\-coder/src/simple\-\_\-prefix\-\_\-impl.c File Reference}
-\label{simple__prefix__impl_8c}\index{/\-Users/sidharthamani/huffman\-\_\-coder/src/simple\-\_\-prefix\-\_\-impl.\-c@{/\-Users/sidharthamani/huffman\-\_\-coder/src/simple\-\_\-prefix\-\_\-impl.\-c}}
+\hypertarget{simple__prefix__impl_8c}{\section{/\-Users/sidharthamani/\-Crumbler/src/simple\-\_\-prefix\-\_\-impl.c File Reference}
+\label{simple__prefix__impl_8c}\index{/\-Users/sidharthamani/\-Crumbler/src/simple\-\_\-prefix\-\_\-impl.\-c@{/\-Users/sidharthamani/\-Crumbler/src/simple\-\_\-prefix\-\_\-impl.\-c}}
 }
 
 
@@ -11,6 +11,13 @@ The implementation of \hyperlink{structsimple__prefix}{simple\-\_\-prefix} tree 
 
 
 {\ttfamily \#include \char`\"{}simple\-\_\-prefix\-\_\-impl.\-h\char`\"{}}\\*
+Include dependency graph for simple\-\_\-prefix\-\_\-impl.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{simple__prefix__impl_8c__incl}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -76,6 +83,16 @@ convert encoded bits(as binary data) into a character array for decoding. Use th
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+an array of bytes(char) containing each bit of param 1(bit\-\_\-stream) as a character, as required by \hyperlink{simple__prefix__impl_8c_a40ee92d324331ee4ca644e67d3697f58}{simple\-\_\-prefix\-\_\-decode(char$\ast$, struct node$\ast$, int)}
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em bit\-\_\-stream} & bit stream containing the binary encoded information \\
+\hline
+{\em size\-\_\-of\-\_\-bit\-\_\-stream} & size of the bit\-\_\-stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 an array of bytes(char) containing each bit of param 1(bit\-\_\-stream) as a character, as required by \hyperlink{simple__prefix__impl_8c_a40ee92d324331ee4ca644e67d3697f58}{simple\-\_\-prefix\-\_\-decode(char$\ast$, struct node$\ast$, int)} 
 \end{DoxyReturn}
 
@@ -125,6 +142,16 @@ convert encoded character array into bits for reducing storage space. Use this o
  {\bfseries Postcondition \-:} The binary representation of the encoded string is returned as an array of bytes(char) 
 
 /fn char$\ast$ \hyperlink{simple__prefix__impl_8c_ac7b35ccc6d71b9a01d2ab3609e20e698}{char2bits(char$\ast$ encoded\-\_\-string, int size\-\_\-of\-\_\-encoded\-\_\-string)} 
+\begin{DoxyParams}{Parameters}
+{\em encoded\-\_\-string} & The string to be converted into binary \\
+\hline
+{\em size\-\_\-of\-\_\-encoded\-\_\-string} & the size of the string in param 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a bit stream containing the binary information encoded in param 1(encoded\-\_\-string)
+\end{DoxyReturn}
+
 \begin{DoxyParams}{Parameters}
 {\em encoded\-\_\-string} & The string to be converted into binary \\
 \hline

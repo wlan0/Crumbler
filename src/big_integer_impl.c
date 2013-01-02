@@ -61,6 +61,7 @@ big_integer* init_big_integer()
 {
     struct big_integer *temp = (struct big_integer*)malloc(sizeof(struct big_integer));
 	temp->value = NULL;
+	temp->sign = 1;
     return temp;
 }
 
@@ -128,8 +129,8 @@ big_integer* init_big_integer_from_char(char *value)
 }
 
 /*! \fn int compare_big_integers(struct big_integer *operand1, struct big_integer *operand2)
- *  \brief compares two positive integers only <br/>
- *  <b> Precondition: </b> the numbers being compared should both be positive <br/>
+ *  \brief compares any two big_integer(s) <br/>
+ *  <b> Precondition: </b> the numbers being compared should have their signs set to 1 or -1<br/>
  *  <b> Postcondition: </b>The comparison result is returned
  *  \param operand1 the operand against which the other operand will be compared
  *  \param operand2 the operand which will be compared against operand1
@@ -140,11 +141,23 @@ big_integer* init_big_integer_from_char(char *value)
  */ 
 int compare_big_integers(struct big_integer *operand1, struct big_integer *operand2)
 {
-	if(strlen(operand1->value) != strlen(operand2->value))
+	if (operand1->sign == 1 && operand2->sign == 1) 
 	{
-		return (strlen(operand1->value)>strlen(operand2->value)?1:-1);
+		if(strlen(operand1->value) != strlen(operand2->value))
+		{
+			return (strlen(operand1->value)>strlen(operand2->value)?1:-1);
+		}
+		return strcmp(operand1->value,operand2->value);
 	}
-	return strcmp(operand1->value,operand2->value);
+	else if(operand1->sign == -1 && operand2->sign == -1)
+	{
+		if(strlen(operand1->value) != strlen(operand2->value))
+		{
+			return (strlen(operand1->value)>strlen(operand2->value)?-1:1);
+		}
+		return strcmp(operand2->value,operand1->value);
+	}
+	return (operand1->sign == 1)?1:-1;
 }
 	
 /*! \fn void destroy_big_integer(big_integer *obj)

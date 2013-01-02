@@ -90,7 +90,7 @@ Big_Int* add_Big_Ints(Big_Int *operand1,Big_Int *operand2,Big_Int *result);
  */
 int compare_Big_Ints(Big_Int *operand1,Big_Int *operand2);
 
-/*! \fn void destroy_Big_Int(Big_Int *obj)
+/*! \fn void destroy_Big_Int(Big_Int *)
  *  \brief frees the allocated memory <br/>
  *  <b> Precondition: </b> the Big_Int pointer which it is being freed should not have been freed already <br/>
  *  <b> Postcondition: </b>The big_integer structure is freed
@@ -98,5 +98,6 @@ int compare_Big_Ints(Big_Int *operand1,Big_Int *operand2);
  *  \return Nothing
  */ 
 void destroy_Big_int(Big_Int *obj);
+
 
 #endif

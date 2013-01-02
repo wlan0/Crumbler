@@ -65,8 +65,8 @@ big_integer* init_big_integer_from_long(long long long_long_value);
 big_integer* init_big_integer_from_char(char *char_value);
 
 /*! \fn int compare_big_integers(struct big_integer *operand1, struct big_integer *operand2)
- *  \brief compares two positive integers only <br/>
- *  <b> Precondition: </b> the numbers being compared should both be positive <br/>
+ *  \brief compares any two big_integer(s) <br/>
+ *  <b> Precondition: </b> the numbers being compared should have their signs set to 1 or -1<br/>
  *  <b> Postcondition: </b>The comparison result is returned
  *  \param operand1 the operand against which the other operand will be compared
  *  \param operand2 the operand which will be compared against operand1

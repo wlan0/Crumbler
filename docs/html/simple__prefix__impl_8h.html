@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Crumbler: /Users/sidharthamani/huffman_coder/include/simple_prefix_impl.h File Reference</title>
+<title>Crumbler: /Users/sidharthamani/Crumbler/include/simple_prefix_impl.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,12 +26,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Crumpler_Logo.gif"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Crumpler_Logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Crumbler
    &#160;<span id="projectnumber">v0.1</span>
    </div>
-   <div id="projectbrief">a multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability</div>
+   <div id="projectbrief">a cloud based multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability</div>
   </td>
  </tr>
  </tbody>
@@ -121,6 +121,18 @@ $(document).ready(function(){initNavTree('simple__prefix__impl_8h.html','');});
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for simple_prefix_impl.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="simple__prefix__impl_8h__incl.png" border="0" usemap="#_2_users_2sidharthamani_2_crumbler_2include_2simple__prefix__impl_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="simple__prefix__impl_8h__dep__incl.png" border="0" usemap="#_2_users_2sidharthamani_2_crumbler_2include_2simple__prefix__impl_8hdep" alt=""/></div>
+<map name="_2_users_2sidharthamani_2_crumbler_2include_2simple__prefix__impl_8hdep" id="_2_users_2sidharthamani_2_crumbler_2include_2simple__prefix__impl_8hdep">
+<area shape="rect" id="node3" href="simple__prefix_8h.html" title="serves as the interface to simple_prefix This file contains functions required to support encoding an..." alt="" coords="208,115,376,175"/><area shape="rect" id="node11" href="simple__prefix__impl_8c.html" title="The implementation of simple_prefix tree This file contains functions required to support the encodin..." alt="" coords="400,115,547,175"/><area shape="rect" id="node5" href="simple__prefix__decoder_8c.html" title="A sample implementation of simple prefix decoding using crumbler library &#160;&#160;Author : Sidhartha Mani &#160;&#160;..." alt="" coords="4,225,179,285"/><area shape="rect" id="node7" href="simple__prefix__encoder_8c.html" title="A sample implementation of simple prefix encoding using crumbler library &#160;&#160;Author : Sidhartha Mani &#160;&#160;..." alt="" coords="204,225,379,285"/><area shape="rect" id="node9" href="simple__prefix_8c.html" title="The interface to simple_prefix implementation This file contains functions required to interface with..." alt="" coords="404,225,551,285"/></map>
+</div>
 </div>
 <p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -178,16 +190,16 @@ Functions</h2></td></tr>
  <b>Precondition :</b> The tree should have already been generated. The string capturing the return value should not have already been allocated memory<br/>
  <b>Postcondition :</b> The encoded string is decoded and returned to the calling environment  <a href="#a01c7baaef3398c045f127558eeef0b14"></a><br/></td></tr>
 <tr class="separator:a01c7baaef3398c045f127558eeef0b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7b35ccc6d71b9a01d2ab3609e20e698"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#ac7b35ccc6d71b9a01d2ab3609e20e698">char2bits</a> (char *encoded_string, int size_of_encoded_string)</td></tr>
-<tr class="memdesc:ac7b35ccc6d71b9a01d2ab3609e20e698"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert encoded character array into bits for reducing storage space. Use this on an encoded string before persisting this in a file or wherever<br/>
+<tr class="memitem:ad1bc46a0b15e7c78972582382c673f67"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#ad1bc46a0b15e7c78972582382c673f67">char2bits</a> (char *encoded_string, int size_of_encoded_string)</td></tr>
+<tr class="memdesc:ad1bc46a0b15e7c78972582382c673f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert encoded character array into bits for reducing storage space. Use this on an encoded string before persisting this in a file or wherever<br/>
  <b>Precondition :</b> The string capturing the return value should not have already been allocated memory<br/>
- <b>Postcondition :</b> The binary representation of the encoded string is returned as an array of bytes(char)  <a href="#ac7b35ccc6d71b9a01d2ab3609e20e698"></a><br/></td></tr>
-<tr class="separator:ac7b35ccc6d71b9a01d2ab3609e20e698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbcb96421197815cdb34df33d65839c8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#adbcb96421197815cdb34df33d65839c8">bits2char</a> (char *bit_stream, int size_of_bit_stream)</td></tr>
-<tr class="memdesc:adbcb96421197815cdb34df33d65839c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert encoded bits(as binary data) into a character array for decoding. Use this whenever you read from a persisted source.simple_prefix_decode(char*, struct node*, int) undersands encoded strings in char format, not actual binary. Lots of improvement required in this function. Right now, it can only work with the constraint of encoded string length being a multiple of 8.<br/>
+ <b>Postcondition :</b> The binary representation of the encoded string is returned as an array of bytes(char)  <a href="#ad1bc46a0b15e7c78972582382c673f67"></a><br/></td></tr>
+<tr class="separator:ad1bc46a0b15e7c78972582382c673f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5c5d48a1976c228264eed42c276209"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__prefix__impl_8h.html#a8e5c5d48a1976c228264eed42c276209">bits2char</a> (char *bit_stream, int size_of_bit_stream)</td></tr>
+<tr class="memdesc:a8e5c5d48a1976c228264eed42c276209"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert encoded bits(as binary data) into a character array for decoding. Use this whenever you read from a persisted source.simple_prefix_decode(char*, struct node*, int) undersands encoded strings in char format, not actual binary. Lots of improvement required in this function. Right now, it can only work with the constraint of encoded string length being a multiple of 8.<br/>
  <b>Precondition :</b> The string capturing the return value should not have already been allocated memory<br/>
- <b>Postcondition :</b> The character representation of the encoded binary string is returned as an array of bytes(char)  <a href="#adbcb96421197815cdb34df33d65839c8"></a><br/></td></tr>
-<tr class="separator:adbcb96421197815cdb34df33d65839c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ <b>Postcondition :</b> The character representation of the encoded binary string is returned as an array of bytes(char)  <a href="#a8e5c5d48a1976c228264eed42c276209"></a><br/></td></tr>
+<tr class="separator:a8e5c5d48a1976c228264eed42c276209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>serves as the interface to the implementation of <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree This file contains functions required to support the encoding and de-coding functions.<br/>
@@ -210,7 +222,12 @@ Functions</h2></td></tr>
 <div class="textblock"><p>a node of a <a class="el" href="structsimple__prefix.html" title="the interface to the simple prefix functions">simple_prefix</a> tree </p>
 
 <p>Definition at line <a class="el" href="#L66">66</a> of file <a class="el" href="">simple_prefix_impl.h</a>.</p>
-</div><table class="fieldtable">
+</div><div class="dynheader">
+Collaboration diagram for node:</div>
+<div class="dyncontent">
+<div class="center"><img src="structnode__coll__graph.png" border="0" usemap="#node_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
 <a class="anchor" id="ad066657fe1374fb9852c285175a3774f"></a>int</td>
@@ -354,12 +371,12 @@ The pointer to the right subtree </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="adbcb96421197815cdb34df33d65839c8"></a>
+<a class="anchor" id="a8e5c5d48a1976c228264eed42c276209"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* bits2char </td>
+          <td class="memname">char * bits2char </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>bit_stream</em>, </td>
@@ -382,6 +399,14 @@ The pointer to the right subtree </td></tr>
  <b>Precondition :</b> The string capturing the return value should not have already been allocated memory<br/>
  <b>Postcondition :</b> The character representation of the encoded binary string is returned as an array of bytes(char) </p>
 <p>/fn char* <a class="el" href="simple__prefix__impl_8c.html#adbcb96421197815cdb34df33d65839c8" title="convert encoded bits(as binary data) into a character array for decoding. Use this whenever you read ...">bits2char(char* bit_stream, int size_of_bit_stream)</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bit_stream</td><td>bit stream containing the binary encoded information </td></tr>
+    <tr><td class="paramname">size_of_bit_stream</td><td>size of the bit_stream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an array of bytes(char) containing each bit of param 1(bit_stream) as a character, as required by <a class="el" href="simple__prefix__impl_8c.html#a40ee92d324331ee4ca644e67d3697f58" title="decode an encoded string by using the prefix tree generated by construct_simple_prefix(struct node*...">simple_prefix_decode(char*, struct node*, int)</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bit_stream</td><td>bit stream containing the binary encoded information </td></tr>
@@ -420,12 +445,12 @@ The pointer to the right subtree </td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="ac7b35ccc6d71b9a01d2ab3609e20e698"></a>
+<a class="anchor" id="ad1bc46a0b15e7c78972582382c673f67"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* char2bits </td>
+          <td class="memname">char * char2bits </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>encoded_string</em>, </td>
@@ -448,6 +473,14 @@ The pointer to the right subtree </td></tr>
  <b>Precondition :</b> The string capturing the return value should not have already been allocated memory<br/>
  <b>Postcondition :</b> The binary representation of the encoded string is returned as an array of bytes(char) </p>
 <p>/fn char* <a class="el" href="simple__prefix__impl_8c.html#ac7b35ccc6d71b9a01d2ab3609e20e698" title="convert encoded character array into bits for reducing storage space. Use this on an encoded string b...">char2bits(char* encoded_string, int size_of_encoded_string)</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encoded_string</td><td>The string to be converted into binary </td></tr>
+    <tr><td class="paramname">size_of_encoded_string</td><td>the size of the string in param 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a bit stream containing the binary information encoded in param 1(encoded_string)</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">encoded_string</td><td>The string to be converted into binary </td></tr>
@@ -774,7 +807,7 @@ The pointer to the right subtree </td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="simple__prefix__impl_8h.html">simple_prefix_impl.h</a></li>
-    <li class="footer">Generated on Mon Dec 24 2012 18:01:45 for Crumbler by
+    <li class="footer">Generated on Wed Jan 2 2013 10:49:21 for Crumbler by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

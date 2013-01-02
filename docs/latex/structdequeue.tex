@@ -1,0 +1,75 @@
+\hypertarget{structdequeue}{\section{dequeue Struct Reference}
+\label{structdequeue}\index{dequeue@{dequeue}}
+}
+
+
+the interface to the double ended queue  
+
+
+
+
+{\ttfamily \#include $<$dequeue.\-h$>$}
+
+
+
+Collaboration diagram for dequeue\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{structdequeue__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structdequeue_a8b1cacb0a459b9994cf7f0653e366d04}{size\-\_\-of\-\_\-data}
+\item 
+struct \hyperlink{dequeue__impl_8h_structdq}{dq} $\ast$ \hyperlink{structdequeue_a51fbcea7276e827ff78ca4c6a9d66d3e}{queue}
+\item 
+void($\ast$ \hyperlink{structdequeue_afd7779266d6b9dda030846a62fa26fad}{enqueue} )(struct Dequeue $\ast$this, void $\ast$data)
+\item 
+void $\ast$($\ast$ \hyperlink{structdequeue_aaaa21837723622119f76d2fa67ac51fc}{dequeue} )(struct Dequeue $\ast$this)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the interface to the double ended queue 
+
+Definition at line 17 of file dequeue.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structdequeue_aaaa21837723622119f76d2fa67ac51fc}{\index{dequeue@{dequeue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!dequeue@{dequeue}}
+\subsubsection[{dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$($\ast$ {\bf dequeue})(struct Dequeue $\ast$this)}}\label{structdequeue_aaaa21837723622119f76d2fa67ac51fc}
+a functor to dequeue data from the queue 
+
+Definition at line 26 of file dequeue.\-h.
+
+\hypertarget{structdequeue_afd7779266d6b9dda030846a62fa26fad}{\index{dequeue@{dequeue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!dequeue@{dequeue}}
+\subsubsection[{enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ enqueue)(struct Dequeue $\ast$this, void $\ast$data)}}\label{structdequeue_afd7779266d6b9dda030846a62fa26fad}
+a functor for enqueing data into the queue 
+
+Definition at line 24 of file dequeue.\-h.
+
+\hypertarget{structdequeue_a51fbcea7276e827ff78ca4c6a9d66d3e}{\index{dequeue@{dequeue}!queue@{queue}}
+\index{queue@{queue}!dequeue@{dequeue}}
+\subsubsection[{queue}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf dq}$\ast$ queue}}\label{structdequeue_a51fbcea7276e827ff78ca4c6a9d66d3e}
+a pointer to the underlying queue implementation 
+
+Definition at line 22 of file dequeue.\-h.
+
+\hypertarget{structdequeue_a8b1cacb0a459b9994cf7f0653e366d04}{\index{dequeue@{dequeue}!size\-\_\-of\-\_\-data@{size\-\_\-of\-\_\-data}}
+\index{size\-\_\-of\-\_\-data@{size\-\_\-of\-\_\-data}!dequeue@{dequeue}}
+\subsubsection[{size\-\_\-of\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int size\-\_\-of\-\_\-data}}\label{structdequeue_a8b1cacb0a459b9994cf7f0653e366d04}
+
+
+Definition at line 20 of file dequeue.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/sidharthamani/\-Crumbler/include/collections/\hyperlink{dequeue_8h}{dequeue.\-h}\end{DoxyCompactItemize}

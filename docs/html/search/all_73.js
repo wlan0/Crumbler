@@ -13,5 +13,6 @@ var searchData=
   ['simple_5fprefix_5fencoder_2ec',['simple_prefix_encoder.c',['../simple__prefix__encoder_8c.html',1,'']]],
   ['simple_5fprefix_5fimpl_2ec',['simple_prefix_impl.c',['../simple__prefix__impl_8c.html',1,'']]],
   ['simple_5fprefix_5fimpl_2eh',['simple_prefix_impl.h',['../simple__prefix__impl_8h.html',1,'']]],
+  ['size_5fof_5fdata',['size_of_data',['../structdequeue.html#a8b1cacb0a459b9994cf7f0653e366d04',1,'dequeue']]],
   ['sorted_5ffrequencies_5ftree',['sorted_frequencies_tree',['../namespacefrequency__sorter__generator.html#a46abc2f5c61db548b0851ad685b29a49',1,'frequency_sorter_generator']]]
 ];

@@ -1,0 +1,129 @@
+\hypertarget{dequeue_8h}{\section{/\-Users/sidharthamani/\-Crumbler/include/collections/dequeue.h File Reference}
+\label{dequeue_8h}\index{/\-Users/sidharthamani/\-Crumbler/include/collections/dequeue.\-h@{/\-Users/sidharthamani/\-Crumbler/include/collections/dequeue.\-h}}
+}
+
+
+This file serves as the interface to dequeue functionality. \par
+ It contains the interface to the various functions associated with the queue.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 2 Jan 2013\par
+  
+
+
+{\ttfamily \#include \char`\"{}dequeue\-\_\-impl.\-h\char`\"{}}\\*
+Include dependency graph for dequeue.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dequeue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{dequeue_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdequeue}{dequeue}
+\begin{DoxyCompactList}\small\item\em the interface to the double ended queue \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdequeue}{dequeue} $\ast$ \hyperlink{dequeue_8h_a917c88d45077bd0377e3cf8a357c94ac}{init\-\_\-dequeue} (int size\-\_\-of\-\_\-data)
+\begin{DoxyCompactList}\small\item\em allocate memory to the a new dequeue\par
+ {\bfseries  Precondition \-: The queue structure to which the memory is being allocated should not have been already allocated memory.} \par
+ {\bfseries  Postcondition \-: The required memory to represent a dequeue is allocated} \par
+ \end{DoxyCompactList}\item 
+void \hyperlink{dequeue_8h_ad6f8874b7eaef50ada743adf7621396d}{destroy\-\_\-dequeue} (struct Dequeue $\ast$queue)
+\begin{DoxyCompactList}\small\item\em deletes the data stored in the dequeue and the dequeue itself \par
+ {\bfseries  Precondition \-: The queue should have been initialized by a call to init\-\_\-dq, it should not have been already de-\/allocated} \par
+ {\bfseries  Postcondition \-: The queue's memory is completely de-\/allocated} \par
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file serves as the interface to dequeue functionality. \par
+ It contains the interface to the various functions associated with the queue.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 2 Jan 2013\par
+ 
+
+Definition in file \hyperlink{}{dequeue.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{dequeue_8h_ad6f8874b7eaef50ada743adf7621396d}{\index{dequeue.\-h@{dequeue.\-h}!destroy\-\_\-dequeue@{destroy\-\_\-dequeue}}
+\index{destroy\-\_\-dequeue@{destroy\-\_\-dequeue}!dequeue.h@{dequeue.\-h}}
+\subsubsection[{destroy\-\_\-dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\-\_\-dequeue (
+\begin{DoxyParamCaption}
+\item[{struct Dequeue $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{dequeue_8h_ad6f8874b7eaef50ada743adf7621396d}
+
+
+deletes the data stored in the dequeue and the dequeue itself \par
+ {\bfseries  Precondition \-: The queue should have been initialized by a call to init\-\_\-dq, it should not have been already de-\/allocated} \par
+ {\bfseries  Postcondition \-: The queue's memory is completely de-\/allocated} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue which is being de-\/allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file dequeue.\-c.
+
+
+\begin{DoxyCode}
+\{
+    destroy\_dq(queue->queue);
+    free(queue);
+\}\end{DoxyCode}
+\hypertarget{dequeue_8h_a917c88d45077bd0377e3cf8a357c94ac}{\index{dequeue.\-h@{dequeue.\-h}!init\-\_\-dequeue@{init\-\_\-dequeue}}
+\index{init\-\_\-dequeue@{init\-\_\-dequeue}!dequeue.h@{dequeue.\-h}}
+\subsubsection[{init\-\_\-dequeue}]{\setlength{\rightskip}{0pt plus 5cm}struct Dequeue $\ast$ init\-\_\-dequeue (
+\begin{DoxyParamCaption}
+\item[{int}]{size\-\_\-of\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [read]}}}\label{dequeue_8h_a917c88d45077bd0377e3cf8a357c94ac}
+
+
+allocate memory to the a new dequeue\par
+ {\bfseries  Precondition \-: The queue structure to which the memory is being allocated should not have been already allocated memory.} \par
+ {\bfseries  Postcondition \-: The required memory to represent a dequeue is allocated} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\-\_\-of\-\_\-data} & The size of the data type which the queue will hold \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file dequeue.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{struct }Dequeue *queue = (\textcolor{keyword}{struct }Dequeue *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} Dequeue));
+    queue->queue = \hyperlink{dequeue__impl_8h_a9b4f2492151ddc3550510c856354f234}{init\_dq}();
+    queue->enqueue = \hyperlink{dequeue_8c_a20ccade5d268a87a98388fd7e0d1d99d}{x\_enqueue};
+    queue->dequeue = \hyperlink{dequeue_8c_aeb1ede44ed061ba35118c7a72ccbce4e}{x\_dequeue};
+    queue->size\_of\_data = size\_of\_data;
+\}
+\end{DoxyCode}

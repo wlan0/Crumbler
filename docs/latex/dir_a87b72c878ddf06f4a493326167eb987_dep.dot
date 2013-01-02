@@ -1,9 +1,0 @@
-digraph "/Users/sidharthamani/huffman_coder/res/scripts" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_7b47cca4d318623bb4270ab1fb592ef5 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="res" fontname="Helvetica", fontsize="10", URL="dir_7b47cca4d318623bb4270ab1fb592ef5.html"]
-  dir_a87b72c878ddf06f4a493326167eb987 [shape=box, label="scripts", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a87b72c878ddf06f4a493326167eb987.html"];
-  }
-}

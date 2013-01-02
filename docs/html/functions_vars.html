@@ -26,12 +26,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Crumpler_Logo.gif"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Crumpler_Logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Crumbler
    &#160;<span id="projectnumber">v0.1</span>
    </div>
-   <div id="projectbrief">a multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability</div>
+   <div id="projectbrief">a cloud based multi-platform/multi-algorithm compression/decompression platform for mobiles and computers built for high performance and scalability</div>
   </td>
  </tr>
  </tbody>
@@ -111,17 +111,29 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 <div class="contents">
 &#160;<ul>
+<li>data
+: <a class="el" href="double__edged__node_8h.html#a735984d41155bc1032e09bece8f8d66d">double_edged_node</a>
+</li>
 <li>decode_file
 : <a class="el" href="structsimple__prefix.html#a58708e15f01f3be37e12d3194e953b41">simple_prefix</a>
 </li>
+<li>dequeue
+: <a class="el" href="structdequeue.html#aaaa21837723622119f76d2fa67ac51fc">dequeue</a>
+</li>
 <li>encode_file
 : <a class="el" href="structsimple__prefix.html#a73d0a239981b130553964b3839c20bdf">simple_prefix</a>
+</li>
+<li>enqueue
+: <a class="el" href="structdequeue.html#afd7779266d6b9dda030846a62fa26fad">dequeue</a>
 </li>
 <li>get_integer
 : <a class="el" href="struct_big___int.html#ac8d650b12656faee53d9ebd863e9fe8f">Big_Int</a>
 </li>
 <li>get_sign
 : <a class="el" href="struct_big___int.html#ae06ba678ba07ecdac264605bc8576da2">Big_Int</a>
+</li>
+<li>head
+: <a class="el" href="dequeue__impl_8h.html#a7fe9b2fb6a9d531bc8bf3be22a91c4d4">dq</a>
 </li>
 <li>integer
 : <a class="el" href="struct_big___int.html#af78495b20eeda6242727ea99032693c2">Big_Int</a>
@@ -130,13 +142,21 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="simple__prefix__impl_8h.html#ad066657fe1374fb9852c285175a3774f">node</a>
 </li>
 <li>left_node
-: <a class="el" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">node</a>
+: <a class="el" href="double__edged__node_8h.html#af2eb66cb86e326f7190e1d41a6eac598">double_edged_node</a>
+, <a class="el" href="simple__prefix__impl_8h.html#a43dd3cf499d5b2270fcfbb29eb0a0d66">node</a>
+</li>
+<li>length
+: <a class="el" href="dequeue__impl_8h.html#a9f59b34b1f25fe00023291b678246bcc">dq</a>
 </li>
 <li>msg
 : <a class="el" href="simple__prefix__impl_8h.html#ad80e777cd260fdd5ca6ad3f25b5e76de">node</a>
 </li>
+<li>queue
+: <a class="el" href="structdequeue.html#a51fbcea7276e827ff78ca4c6a9d66d3e">dequeue</a>
+</li>
 <li>right_node
-: <a class="el" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">node</a>
+: <a class="el" href="double__edged__node_8h.html#a6fb32c7a400fc109f8d5db533d98663f">double_edged_node</a>
+, <a class="el" href="simple__prefix__impl_8h.html#af729d9e66cefdd8c0a114cb0da5f7b7c">node</a>
 </li>
 <li>set_integer
 : <a class="el" href="struct_big___int.html#a34a65fb8d8cc2acf5a14a18c420ee774">Big_Int</a>
@@ -147,6 +167,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>sign
 : <a class="el" href="big__integer__impl_8h.html#abbeb8ae63622a7fef0b5a56bb91a1682">big_integer</a>
 </li>
+<li>size_of_data
+: <a class="el" href="structdequeue.html#a8b1cacb0a459b9994cf7f0653e366d04">dequeue</a>
+</li>
+<li>tail
+: <a class="el" href="dequeue__impl_8h.html#adf07c4b1194a5321353dc8931a3c1953">dq</a>
+</li>
 <li>value
 : <a class="el" href="big__integer__impl_8h.html#a4e9aec275e566b978a3ccb4e043d8c61">big_integer</a>
 </li>
@@ -156,7 +182,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Dec 24 2012 18:01:45 for Crumbler by
+    <li class="footer">Generated on Wed Jan 2 2013 10:49:21 for Crumbler by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

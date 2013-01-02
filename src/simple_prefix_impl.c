@@ -196,7 +196,7 @@ char* simple_prefix_decode(char *encoded_string, struct node *root, int size_of_
     return decoded_string;
 }
 
-/*! /fn char* char2bits(char* encoded_string, int size_of_encoded_string)
+/*! \fn char* char2bits(char* encoded_string, int size_of_encoded_string)
  *  \brief convert encoded character array into bits for reducing storage space. Use this on an encoded string 
  *  before persisting this in a file or wherever<br/>
  *  <b>Precondition :</b> The string capturing the return value should not
@@ -225,7 +225,7 @@ char* char2bits(char* encoded_string, int size_of_encoded_string)
 	return bit_stream;
 }
 
-/*! /fn char* bits2char(char* bit_stream, int size_of_bit_stream)
+/*! \fn char* bits2char(char* bit_stream, int size_of_bit_stream)
  *  \brief convert encoded bits(as binary data) into a character array for decoding. Use this whenever you read from a
  *  persisted source.simple_prefix_decode(char*, struct node*, int) undersands
  *  encoded strings in char format, not actual binary. Lots of improvement required in this function. Right now, it can

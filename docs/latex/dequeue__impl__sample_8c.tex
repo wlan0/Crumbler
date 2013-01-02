@@ -1,0 +1,82 @@
+\hypertarget{dequeue__impl__sample_8c}{\section{/\-Users/sidharthamani/\-Crumbler/samples/dequeue\-\_\-impl\-\_\-sample.c File Reference}
+\label{dequeue__impl__sample_8c}\index{/\-Users/sidharthamani/\-Crumbler/samples/dequeue\-\_\-impl\-\_\-sample.\-c@{/\-Users/sidharthamani/\-Crumbler/samples/dequeue\-\_\-impl\-\_\-sample.\-c}}
+}
+
+
+A sample implementation of enqueing and dequing using crumbler library \par
+ Author \-: Sidhartha Mani \par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last updated on \-: 29 Dec 2012.  
+
+
+{\ttfamily \#include \char`\"{}big\-\_\-integer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dequeue\-\_\-impl.\-h\char`\"{}}\\*
+Include dependency graph for dequeue\-\_\-impl\-\_\-sample.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dequeue__impl__sample_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{dequeue__impl__sample_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A sample implementation of enqueing and dequing using crumbler library \par
+ Author \-: Sidhartha Mani \par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last updated on \-: 29 Dec 2012. 
+
+Definition in file \hyperlink{}{dequeue\-\_\-impl\-\_\-sample.\-c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{dequeue__impl__sample_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{dequeue\-\_\-impl\-\_\-sample.\-c@{dequeue\-\_\-impl\-\_\-sample.\-c}!main@{main}}
+\index{main@{main}!dequeue_impl_sample.c@{dequeue\-\_\-impl\-\_\-sample.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dequeue__impl__sample_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Definition at line 12 of file dequeue\-\_\-impl\-\_\-sample.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{char} integer1[2250];
+    \textcolor{keywordtype}{char} integer2[2250];
+    printf(\textcolor{stringliteral}{"Enter x\(\backslash\)n"});
+    scanf(\textcolor{stringliteral}{"%s"},integer1);
+    printf(\textcolor{stringliteral}{"Enter y\(\backslash\)n"});
+    scanf(\textcolor{stringliteral}{"%s"},integer2);
+    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *x= \hyperlink{big__integer_8h_ae14e62d253605c66f8ff24d6ff75e5b9}{init\_Big\_Int\_from\_char}(
+      integer1);
+    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *y = \hyperlink{big__integer_8h_ae14e62d253605c66f8ff24d6ff75e5b9}{init\_Big\_Int\_from\_char}(
+      integer2);
+    \textcolor{keyword}{struct }\hyperlink{dequeue__impl_8h_structdq}{dq} *queue = \hyperlink{dequeue__impl_8h_a9b4f2492151ddc3550510c856354f234}{init\_dq}();
+    \hyperlink{dequeue__impl_8h_a984ea7bc3235a75f2dd887482b866726}{q\_enqueue}(queue,(\textcolor{keywordtype}{void} *)x,\textcolor{keyword}{sizeof}(\hyperlink{struct_big___int}{Big\_Int}));
+    \hyperlink{dequeue__impl_8h_a984ea7bc3235a75f2dd887482b866726}{q\_enqueue}(queue,(\textcolor{keywordtype}{void} *)y,\textcolor{keyword}{sizeof}(\hyperlink{struct_big___int}{Big\_Int}));
+    \textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *z;
+    z = (\textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *)\hyperlink{dequeue__impl_8h_ace3e98b73d98255be313f0e765671f7d}{q\_dequeue}(queue,(\textcolor{keywordtype}{void} *)z,\textcolor{keyword}{sizeof}(
+      \hyperlink{struct_big___int}{Big\_Int}));
+    printf(\textcolor{stringliteral}{"%s\(\backslash\)n"},z->\hyperlink{struct_big___int_ac8d650b12656faee53d9ebd863e9fe8f}{get\_integer}(z));
+    z = (\textcolor{keyword}{struct }\hyperlink{struct_big___int}{Big\_Int} *)\hyperlink{dequeue__impl_8h_ace3e98b73d98255be313f0e765671f7d}{q\_dequeue}(queue,(\textcolor{keywordtype}{void} *)z,\textcolor{keyword}{sizeof}(
+      \hyperlink{struct_big___int}{Big\_Int}));
+    printf(\textcolor{stringliteral}{"%s\(\backslash\)n"},z->get\_integer(z));
+    \hyperlink{dequeue__impl_8h_a8ed2befd976b9ede0c751574d96a9e29}{destoy\_dq}(queue);
+    \hyperlink{big__integer_8c_a45174c2ae172f98bd7045eaaf7c51800}{destroy\_Big\_Int}(x);
+    \hyperlink{big__integer_8c_a45174c2ae172f98bd7045eaaf7c51800}{destroy\_Big\_Int}(y);
+    \textcolor{comment}{//the data of z was never allocated!! It is just copying the pointer to
+       big\_integer data. Calling destroy\_Big\_Int, will try}
+    \textcolor{comment}{// to free de-allocated memory. Therefore error! In order to avoid this,
+       call free....}
+    free(z);
+    \textcolor{keywordflow}{return} 0;
+\}\end{DoxyCode}

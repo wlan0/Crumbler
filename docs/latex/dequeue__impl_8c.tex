@@ -1,0 +1,318 @@
+\hypertarget{dequeue__impl_8c}{\section{/\-Users/sidharthamani/\-Crumbler/src/collections/dequeue\-\_\-impl.c File Reference}
+\label{dequeue__impl_8c}\index{/\-Users/sidharthamani/\-Crumbler/src/collections/dequeue\-\_\-impl.\-c@{/\-Users/sidharthamani/\-Crumbler/src/collections/dequeue\-\_\-impl.\-c}}
+}
+
+
+This file contains the implementation of dequeue logic \par
+ It serves as the implementation of various functions that the queue supports.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 28 Dec 2012\par
+  
+
+
+{\ttfamily \#include \char`\"{}dequeue\-\_\-impl.\-h\char`\"{}}\\*
+Include dependency graph for dequeue\-\_\-impl.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dequeue__impl_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{double__edged__node_8h_structdouble__edged__node}{double\-\_\-edged\-\_\-node} $\ast$ \hyperlink{dequeue__impl_8c_a278a9a48b60829ec1fbf38f31a97f9b9}{init\-\_\-double\-\_\-edged\-\_\-node} ()
+\begin{DoxyCompactList}\small\item\em initialize a double edged node with the head and tail pointing to the same location, both unallocated\par
+ {\bfseries  Precondition \-:} The data structure collecting the allocated memory should not have already been allocated\par
+ {\bfseries  Postcondition \-:} The memory is allocated\par
+ \end{DoxyCompactList}\item 
+struct \hyperlink{dequeue__impl_8h_structdq}{dq} $\ast$ \hyperlink{dequeue__impl_8c_a6393bc784162bd8c65ab684e5486df6c}{init\-\_\-dq} ()
+\begin{DoxyCompactList}\small\item\em initializes a double ended queue\par
+ {\bfseries  Precondition \-:} The data structure collecting the allocated memory should not have already been allocated\par
+ {\bfseries  Postcondition \-:} The memory is allocated\par
+ \end{DoxyCompactList}\item 
+void \hyperlink{dequeue__impl_8c_a984ea7bc3235a75f2dd887482b866726}{q\-\_\-enqueue} (\hyperlink{dequeue__impl_8h_structdq}{dq} $\ast$queue, void $\ast$data, int size\-\_\-of\-\_\-data)
+\begin{DoxyCompactList}\small\item\em Adds an element to the front of the queue\par
+ {\bfseries  Precondition \-: The queue should have been initialized by a call to init\-\_\-dq} \par
+ {\bfseries  Postcondition \-: The element is copied to the queue Data Structure} \par
+ \end{DoxyCompactList}\item 
+void \hyperlink{dequeue__impl_8c_a159e7f799f440d51a2a4331c356a4eef}{destroy\-\_\-double\-\_\-edged\-\_\-node} (struct \hyperlink{double__edged__node_8h_structdouble__edged__node}{double\-\_\-edged\-\_\-node} $\ast$\hyperlink{simple__prefix__impl_8h_structnode}{node})
+\begin{DoxyCompactList}\small\item\em It de-\/allocates the memory allocated to a single node of a queue, including the data\par
+ {\bfseries  Precondition \-: The node should have been allocated memory} \par
+ {\bfseries  Postcondition \-: The node is deleted} \par
+ \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{dequeue__impl_8c_a368a2d8627678c7ed77ccdd0ee062994}{q\-\_\-dequeue} (\hyperlink{dequeue__impl_8h_structdq}{dq} $\ast$queue, void $\ast$data, int size\-\_\-of\-\_\-data)
+\begin{DoxyCompactList}\small\item\em it removes one element from the back of the queue and returns it to the calling environment\par
+ Note \-: The programmer is responsible for deleting the memory allocated for the returned value\par
+ {\bfseries  Precondition \-: queue should have been allocated memory, data should not have been allocated memory, size of data should be known, also type of data} \par
+ {\bfseries  Postcondition \-: one element from the back of the queue is deleted and copied to the calling environment} \par
+ \end{DoxyCompactList}\item 
+void \hyperlink{dequeue__impl_8c_a8ed2befd976b9ede0c751574d96a9e29}{destoy\-\_\-dq} (struct \hyperlink{dequeue__impl_8h_structdq}{dq} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em It de-\/allocates the memory of an entire queue\par
+ {\bfseries  Precondition \-: The queue should have already been allocated some memory} \par
+ {\bfseries  Postcondition \-: The memory is completely de-\/allocated} \par
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the implementation of dequeue logic \par
+ It serves as the implementation of various functions that the queue supports.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 28 Dec 2012\par
+ 
+
+Definition in file \hyperlink{}{dequeue\-\_\-impl.\-c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{dequeue__impl_8c_a8ed2befd976b9ede0c751574d96a9e29}{\index{dequeue\-\_\-impl.\-c@{dequeue\-\_\-impl.\-c}!destoy\-\_\-dq@{destoy\-\_\-dq}}
+\index{destoy\-\_\-dq@{destoy\-\_\-dq}!dequeue_impl.c@{dequeue\-\_\-impl.\-c}}
+\subsubsection[{destoy\-\_\-dq}]{\setlength{\rightskip}{0pt plus 5cm}void destoy\-\_\-dq (
+\begin{DoxyParamCaption}
+\item[{struct {\bf dq} $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{dequeue__impl_8c_a8ed2befd976b9ede0c751574d96a9e29}
+
+
+It de-\/allocates the memory of an entire queue\par
+ {\bfseries  Precondition \-: The queue should have already been allocated some memory} \par
+ {\bfseries  Postcondition \-: The memory is completely de-\/allocated} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & A pointer to the queue being deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file dequeue\-\_\-impl.\-c.
+
+
+\begin{DoxyCode}
+\{
+     \textcolor{keywordflow}{if} (queue->\hyperlink{dequeue__impl_8h_a9f59b34b1f25fe00023291b678246bcc}{length} == 0) \{
+        \textcolor{keywordflow}{return};
+    \}
+    \textcolor{keywordflow}{while} (queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail} != queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head}) 
+    \{
+        queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail} = queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail}->\hyperlink{double__edged__node_8h_af2eb66cb86e326f7190e1d41a6eac598}{left\_node};
+        \hyperlink{dequeue__impl_8h_a159e7f799f440d51a2a4331c356a4eef}{destroy\_double\_edged\_node}(queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail}->
+      \hyperlink{double__edged__node_8h_a6fb32c7a400fc109f8d5db533d98663f}{right\_node});
+    \}
+    \hyperlink{dequeue__impl_8h_a159e7f799f440d51a2a4331c356a4eef}{destroy\_double\_edged\_node}(queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head});
+\}
+\end{DoxyCode}
+\hypertarget{dequeue__impl_8c_a159e7f799f440d51a2a4331c356a4eef}{\index{dequeue\-\_\-impl.\-c@{dequeue\-\_\-impl.\-c}!destroy\-\_\-double\-\_\-edged\-\_\-node@{destroy\-\_\-double\-\_\-edged\-\_\-node}}
+\index{destroy\-\_\-double\-\_\-edged\-\_\-node@{destroy\-\_\-double\-\_\-edged\-\_\-node}!dequeue_impl.c@{dequeue\-\_\-impl.\-c}}
+\subsubsection[{destroy\-\_\-double\-\_\-edged\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\-\_\-double\-\_\-edged\-\_\-node (
+\begin{DoxyParamCaption}
+\item[{struct {\bf double\-\_\-edged\-\_\-node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}}\label{dequeue__impl_8c_a159e7f799f440d51a2a4331c356a4eef}
+
+
+It de-\/allocates the memory allocated to a single node of a queue, including the data\par
+ {\bfseries  Precondition \-: The node should have been allocated memory} \par
+ {\bfseries  Postcondition \-: The node is deleted} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & a pointer to the node which has to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file dequeue\-\_\-impl.\-c.
+
+
+\begin{DoxyCode}
+\{
+    free(node->\hyperlink{double__edged__node_8h_a735984d41155bc1032e09bece8f8d66d}{data});
+    free(node);
+\}
+\end{DoxyCode}
+\hypertarget{dequeue__impl_8c_a278a9a48b60829ec1fbf38f31a97f9b9}{\index{dequeue\-\_\-impl.\-c@{dequeue\-\_\-impl.\-c}!init\-\_\-double\-\_\-edged\-\_\-node@{init\-\_\-double\-\_\-edged\-\_\-node}}
+\index{init\-\_\-double\-\_\-edged\-\_\-node@{init\-\_\-double\-\_\-edged\-\_\-node}!dequeue_impl.c@{dequeue\-\_\-impl.\-c}}
+\subsubsection[{init\-\_\-double\-\_\-edged\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf double\-\_\-edged\-\_\-node}$\ast$ init\-\_\-double\-\_\-edged\-\_\-node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [read]}}}\label{dequeue__impl_8c_a278a9a48b60829ec1fbf38f31a97f9b9}
+
+
+initialize a double edged node with the head and tail pointing to the same location, both unallocated\par
+ {\bfseries  Precondition \-:} The data structure collecting the allocated memory should not have already been allocated\par
+ {\bfseries  Postcondition \-:} The memory is allocated\par
+ 
+
+\begin{DoxyReturn}{Returns}
+pointer pointing to the allocated memory 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file dequeue\-\_\-impl.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{struct }\hyperlink{double__edged__node_8h_structdouble__edged__node}{double\_edged\_node} *temp = (\textcolor{keyword}{struct }\hyperlink{double__edged__node_8h_structdouble__edged__node}{double\_edged\_node}
+      *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \hyperlink{double__edged__node_8h_structdouble__edged__node}{double\_edged\_node}));
+    temp->\hyperlink{double__edged__node_8h_a735984d41155bc1032e09bece8f8d66d}{data} = NULL;
+    temp->\hyperlink{double__edged__node_8h_af2eb66cb86e326f7190e1d41a6eac598}{left\_node} = NULL;
+    temp->\hyperlink{double__edged__node_8h_a6fb32c7a400fc109f8d5db533d98663f}{right\_node} = NULL;
+    \textcolor{keywordflow}{return} temp;
+\}
+\end{DoxyCode}
+\hypertarget{dequeue__impl_8c_a6393bc784162bd8c65ab684e5486df6c}{\index{dequeue\-\_\-impl.\-c@{dequeue\-\_\-impl.\-c}!init\-\_\-dq@{init\-\_\-dq}}
+\index{init\-\_\-dq@{init\-\_\-dq}!dequeue_impl.c@{dequeue\-\_\-impl.\-c}}
+\subsubsection[{init\-\_\-dq}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf dq}$\ast$ init\-\_\-dq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [read]}}}\label{dequeue__impl_8c_a6393bc784162bd8c65ab684e5486df6c}
+
+
+initializes a double ended queue\par
+ {\bfseries  Precondition \-:} The data structure collecting the allocated memory should not have already been allocated\par
+ {\bfseries  Postcondition \-:} The memory is allocated\par
+ 
+
+\begin{DoxyReturn}{Returns}
+pointer pointing to the allocated memory 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file dequeue\-\_\-impl.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{struct }\hyperlink{dequeue__impl_8h_structdq}{dq}* temp = (\textcolor{keyword}{struct }\hyperlink{dequeue__impl_8h_structdq}{dq}*)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \hyperlink{dequeue__impl_8h_structdq}{dq}));
+    temp->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head} = NULL;
+    temp->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail} = temp->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head};
+    temp->\hyperlink{dequeue__impl_8h_a9f59b34b1f25fe00023291b678246bcc}{length} = 0;
+    \textcolor{keywordflow}{return} temp;
+\}
+\end{DoxyCode}
+\hypertarget{dequeue__impl_8c_a368a2d8627678c7ed77ccdd0ee062994}{\index{dequeue\-\_\-impl.\-c@{dequeue\-\_\-impl.\-c}!q\-\_\-dequeue@{q\-\_\-dequeue}}
+\index{q\-\_\-dequeue@{q\-\_\-dequeue}!dequeue_impl.c@{dequeue\-\_\-impl.\-c}}
+\subsubsection[{q\-\_\-dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ q\-\_\-dequeue (
+\begin{DoxyParamCaption}
+\item[{{\bf dq} $\ast$}]{queue, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size\-\_\-of\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{dequeue__impl_8c_a368a2d8627678c7ed77ccdd0ee062994}
+
+
+it removes one element from the back of the queue and returns it to the calling environment\par
+ Note \-: The programmer is responsible for deleting the memory allocated for the returned value\par
+ {\bfseries  Precondition \-: queue should have been allocated memory, data should not have been allocated memory, size of data should be known, also type of data} \par
+ {\bfseries  Postcondition \-: one element from the back of the queue is deleted and copied to the calling environment} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue from which the element needs to be removed \\
+\hline
+{\em data} & A pointer to the data structure that will hold the returned value \\
+\hline
+{\em size\-\_\-of\-\_\-data} & The size of the expected returned value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The data of the element at the back of the queue 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file dequeue\-\_\-impl.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head} == NULL) \{
+        data = NULL;
+        \textcolor{keywordflow}{return} NULL;
+    \}
+    \textcolor{keywordtype}{void} *temp\_data = malloc(size\_of\_data);
+    memcpy(temp\_data,queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail}->\hyperlink{double__edged__node_8h_a735984d41155bc1032e09bece8f8d66d}{data},size\_of\_data);
+    queue->\hyperlink{dequeue__impl_8h_a9f59b34b1f25fe00023291b678246bcc}{length} -= 1;
+    \textcolor{keywordflow}{if} (queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head} == queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail}) 
+    \{
+        \hyperlink{dequeue__impl_8h_a159e7f799f440d51a2a4331c356a4eef}{destroy\_double\_edged\_node}(queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail});
+        queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head} = NULL;
+        queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail} = queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head};
+        data = temp\_data;
+        \textcolor{keywordflow}{return} temp\_data;
+    \}
+    \textcolor{keyword}{struct }\hyperlink{double__edged__node_8h_structdouble__edged__node}{double\_edged\_node} *new\_tail = queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail}->
+      \hyperlink{double__edged__node_8h_af2eb66cb86e326f7190e1d41a6eac598}{left\_node};
+    \hyperlink{dequeue__impl_8h_a159e7f799f440d51a2a4331c356a4eef}{destroy\_double\_edged\_node}(queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail});
+    new\_tail->\hyperlink{double__edged__node_8h_a6fb32c7a400fc109f8d5db533d98663f}{right\_node} = NULL;
+    queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail} = new\_tail;
+    \hyperlink{double__edged__node_8h_a735984d41155bc1032e09bece8f8d66d}{data} = temp\_data;
+    \textcolor{keywordflow}{return} temp\_data;
+\}
+\end{DoxyCode}
+\hypertarget{dequeue__impl_8c_a984ea7bc3235a75f2dd887482b866726}{\index{dequeue\-\_\-impl.\-c@{dequeue\-\_\-impl.\-c}!q\-\_\-enqueue@{q\-\_\-enqueue}}
+\index{q\-\_\-enqueue@{q\-\_\-enqueue}!dequeue_impl.c@{dequeue\-\_\-impl.\-c}}
+\subsubsection[{q\-\_\-enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void q\-\_\-enqueue (
+\begin{DoxyParamCaption}
+\item[{{\bf dq} $\ast$}]{queue, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size\-\_\-of\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{dequeue__impl_8c_a984ea7bc3235a75f2dd887482b866726}
+
+
+Adds an element to the front of the queue\par
+ {\bfseries  Precondition \-: The queue should have been initialized by a call to init\-\_\-dq} \par
+ {\bfseries  Postcondition \-: The element is copied to the queue Data Structure} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue to which the element is being added \\
+\hline
+{\em data} & The value which is being added to the queue \\
+\hline
+{\em size\-\_\-of\-\_\-data} & The size of the data being added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file dequeue\-\_\-impl.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{struct }\hyperlink{double__edged__node_8h_structdouble__edged__node}{double\_edged\_node} *new\_head = \hyperlink{dequeue__impl_8h_a40455f7a272959bef7c624d2dad0a7b4}{
+      init\_double\_edged\_node}();
+    new\_head->\hyperlink{double__edged__node_8h_a735984d41155bc1032e09bece8f8d66d}{data} = malloc(size\_of\_data);
+    memcpy(new\_head->\hyperlink{double__edged__node_8h_a735984d41155bc1032e09bece8f8d66d}{data},\hyperlink{double__edged__node_8h_a735984d41155bc1032e09bece8f8d66d}{data},size\_of\_data);
+    queue->\hyperlink{dequeue__impl_8h_a9f59b34b1f25fe00023291b678246bcc}{length} += 1;
+    \textcolor{keywordflow}{if}(queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head} == NULL)
+    \{
+        queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head} = new\_head;
+        queue->\hyperlink{dequeue__impl_8h_adf07c4b1194a5321353dc8931a3c1953}{tail} = queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head};
+        \textcolor{keywordflow}{return};
+    \}
+    queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head}->\hyperlink{double__edged__node_8h_af2eb66cb86e326f7190e1d41a6eac598}{left\_node} = new\_head;
+    new\_head->\hyperlink{double__edged__node_8h_a6fb32c7a400fc109f8d5db533d98663f}{right\_node} = queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head};
+    queue->\hyperlink{dequeue__impl_8h_a7fe9b2fb6a9d531bc8bf3be22a91c4d4}{head} = new\_head;
+\}
+\end{DoxyCode}

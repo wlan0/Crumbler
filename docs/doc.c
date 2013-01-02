@@ -5,19 +5,22 @@
 
 /*! \mainpage Welcome to Crumbler
  *  \section intro_sec Introduction
- *  This is a project that will implement some of the famous and most widely used compression techniques.
- *  It will be delivered as a cross platform multi-functional library. we will also provide android, windows phone 
- *  and iOS ports. The library is meant to be high performing, scalable, reliable.<br/>
- *  Contributors are welcome. Source is hosted at https://github.com/sidharthamani/Android-Crumbler 
+ *  Crumbler is an innovtive cloud based FileSystem that makes sharing large files really simple. This will make you 
+ *  forget about your mobile device's storage capacity and allow you to share really large files in seconds. All files 
+ *  wil be stored on the cloud and we will provide APIs that will allow App developers and programmers to make innovative
+ *  apps around.
+ *  The Crumbler application/service is meant to be high performing, scalable, reliable, secure, and usable.<br/>
+ *  Contributors are welcome. Source is hosted <a href="https://github.com/sidharthamani/Crumbler">here</a> <br/>
+ *  Check out our <a href="http://sidharthamani.com">blog</a> too! 
  *  \section install_sec Installation
  *  Step 1: In order to install this library in your *unix/mac download zip package <br/>
  *  Step 2: type cd Crumbler <br/>
  *  Step 3: type make install <br/>
  *  Now it is installed. Follow instructions on <a href=#>tutorials section</a> to completely tap into the power of Crumbler
  *  \subsection xyz Getting Started
- *  Go to http://crumbler.sidharthamani.com/files.html and check out the API documentation <br/>
+ *  Go to <a href="http://crumbler.sidharthamani.com/modules.html">module documentation</a> and check out the various modules and their API documentation <br/>
  *  \subsection ayz User Manual
- *  Start using crumbler right away. See our User Manual <a href=#>here.<a/>
+ *  Start using crumbler right away. See our User Manual <a href=#>here</a> <br/>
  */
 
 /*! \defgroup core 
@@ -39,7 +42,7 @@
  */
 
 /*! \page vacancies Vacancies
- *  Need testers, developers, inspectors, marketing guys <br/>
+ *  Need testers, developers, marketing guys <br/>
  *  contact - sidharthamn@gmail.com
  */
 
@@ -48,6 +51,5 @@
  */
 
 /*! \page developers Developers
- *  1. Shankar Narayan G S , Carnegie Mellon grad student, admin <br/>
- *  2. Sidhartha Mani, Carnegie Mellon grad student, labour <br/>
+ *  2. Sidhartha Mani, Carnegie Mellon grad student, contributor <br/>
  */

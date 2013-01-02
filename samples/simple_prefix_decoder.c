@@ -1,4 +1,4 @@
-/*! \file simple_prefix_encoder.c  
+/*! \file simple_prefix_decoder.c  
  *  \brief A sample implementation of simple prefix decoding using crumbler library <br/>
  *  Author : Sidhartha Mani <br/>
  *  Contact : sidharthamn@gmail.com <br/>

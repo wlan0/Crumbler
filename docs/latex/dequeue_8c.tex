@@ -1,0 +1,196 @@
+\hypertarget{dequeue_8c}{\section{/\-Users/sidharthamani/\-Crumbler/src/collections/dequeue.c File Reference}
+\label{dequeue_8c}\index{/\-Users/sidharthamani/\-Crumbler/src/collections/dequeue.\-c@{/\-Users/sidharthamani/\-Crumbler/src/collections/dequeue.\-c}}
+}
+
+
+This file serves as the interface to dequeue functionality. \par
+ It contains the interface to the various functions associated with the queue.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 2 Jan 2013\par
+  
+
+
+{\ttfamily \#include \char`\"{}dequeue.\-h\char`\"{}}\\*
+Include dependency graph for dequeue.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dequeue_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{dequeue_8c_a20ccade5d268a87a98388fd7e0d1d99d}{x\-\_\-enqueue} (struct Dequeue $\ast$queue, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em enqueues data into the queue \par
+ {\bfseries  Precondition \-: The queue should have been initialized} \par
+ {\bfseries  Postcondition \-: The data is added into the queue} \par
+ \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{dequeue_8c_aeb1ede44ed061ba35118c7a72ccbce4e}{x\-\_\-dequeue} (struct Dequeue $\ast$queue)
+\begin{DoxyCompactList}\small\item\em deletes the oldest element from queue and returns it\par
+ {\bfseries  Precondition \-: The queue should have been initialized} \par
+ {\bfseries  Postcondition \-: The last element is returned. If no element was present, then N\-U\-L\-L is returned} \par
+ \end{DoxyCompactList}\item 
+struct Dequeue $\ast$ \hyperlink{dequeue_8c_afe2a7c191e518aeaacd67f4074830c3e}{init\-\_\-dequeue} (int size\-\_\-of\-\_\-data)
+\begin{DoxyCompactList}\small\item\em allocate memory to the a new dequeue\par
+ {\bfseries  Precondition \-: The queue structure to which the memory is being allocated should not have been already allocated memory.} \par
+ {\bfseries  Postcondition \-: The required memory to represent a dequeue is allocated} \par
+ \end{DoxyCompactList}\item 
+void \hyperlink{dequeue_8c_ad6f8874b7eaef50ada743adf7621396d}{destroy\-\_\-dequeue} (struct Dequeue $\ast$queue)
+\begin{DoxyCompactList}\small\item\em deletes the data stored in the dequeue and the dequeue itself \par
+ {\bfseries  Precondition \-: The queue should have been initialized by a call to init\-\_\-dq, it should not have been already de-\/allocated} \par
+ {\bfseries  Postcondition \-: The queue's memory is completely de-\/allocated} \par
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file serves as the interface to dequeue functionality. \par
+ It contains the interface to the various functions associated with the queue.\par
+ Author \-: Sidhartha Mani\par
+ Contact \-: \href{mailto:sidharthamn@gmail.com}{\tt sidharthamn@gmail.\-com} \par
+ Last Updated \-: 2 Jan 2013\par
+ 
+
+Definition in file \hyperlink{}{dequeue.\-c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{dequeue_8c_ad6f8874b7eaef50ada743adf7621396d}{\index{dequeue.\-c@{dequeue.\-c}!destroy\-\_\-dequeue@{destroy\-\_\-dequeue}}
+\index{destroy\-\_\-dequeue@{destroy\-\_\-dequeue}!dequeue.c@{dequeue.\-c}}
+\subsubsection[{destroy\-\_\-dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\-\_\-dequeue (
+\begin{DoxyParamCaption}
+\item[{struct Dequeue $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{dequeue_8c_ad6f8874b7eaef50ada743adf7621396d}
+
+
+deletes the data stored in the dequeue and the dequeue itself \par
+ {\bfseries  Precondition \-: The queue should have been initialized by a call to init\-\_\-dq, it should not have been already de-\/allocated} \par
+ {\bfseries  Postcondition \-: The queue's memory is completely de-\/allocated} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue which is being de-\/allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file dequeue.\-c.
+
+
+\begin{DoxyCode}
+\{
+    destroy\_dq(queue->queue);
+    free(queue);
+\}\end{DoxyCode}
+\hypertarget{dequeue_8c_afe2a7c191e518aeaacd67f4074830c3e}{\index{dequeue.\-c@{dequeue.\-c}!init\-\_\-dequeue@{init\-\_\-dequeue}}
+\index{init\-\_\-dequeue@{init\-\_\-dequeue}!dequeue.c@{dequeue.\-c}}
+\subsubsection[{init\-\_\-dequeue}]{\setlength{\rightskip}{0pt plus 5cm}struct Dequeue$\ast$ init\-\_\-dequeue (
+\begin{DoxyParamCaption}
+\item[{int}]{size\-\_\-of\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [read]}}}\label{dequeue_8c_afe2a7c191e518aeaacd67f4074830c3e}
+
+
+allocate memory to the a new dequeue\par
+ {\bfseries  Precondition \-: The queue structure to which the memory is being allocated should not have been already allocated memory.} \par
+ {\bfseries  Postcondition \-: The required memory to represent a dequeue is allocated} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\-\_\-of\-\_\-data} & The size of the data type which the queue will hold \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file dequeue.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{struct }Dequeue *queue = (\textcolor{keyword}{struct }Dequeue *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} Dequeue));
+    queue->queue = \hyperlink{dequeue__impl_8h_a9b4f2492151ddc3550510c856354f234}{init\_dq}();
+    queue->enqueue = \hyperlink{dequeue_8c_a20ccade5d268a87a98388fd7e0d1d99d}{x\_enqueue};
+    queue->dequeue = \hyperlink{dequeue_8c_aeb1ede44ed061ba35118c7a72ccbce4e}{x\_dequeue};
+    queue->size\_of\_data = size\_of\_data;
+\}
+\end{DoxyCode}
+\hypertarget{dequeue_8c_aeb1ede44ed061ba35118c7a72ccbce4e}{\index{dequeue.\-c@{dequeue.\-c}!x\-\_\-dequeue@{x\-\_\-dequeue}}
+\index{x\-\_\-dequeue@{x\-\_\-dequeue}!dequeue.c@{dequeue.\-c}}
+\subsubsection[{x\-\_\-dequeue}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ x\-\_\-dequeue (
+\begin{DoxyParamCaption}
+\item[{struct Dequeue $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{dequeue_8c_aeb1ede44ed061ba35118c7a72ccbce4e}
+
+
+deletes the oldest element from queue and returns it\par
+ {\bfseries  Precondition \-: The queue should have been initialized} \par
+ {\bfseries  Postcondition \-: The last element is returned. If no element was present, then N\-U\-L\-L is returned} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue which is being dequeued \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the data. I\-M\-P\-O\-R\-T\-A\-N\-T -\/ The programmer is responsible for typecasting the data to the appropriate type before using it. 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file dequeue.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{void} *ptr;
+    ptr = \hyperlink{dequeue__impl_8h_ace3e98b73d98255be313f0e765671f7d}{q\_dequeue}(queue->queue,ptr,queue->size\_of\_data);
+    \textcolor{keywordflow}{return} ptr;
+\}
+\end{DoxyCode}
+\hypertarget{dequeue_8c_a20ccade5d268a87a98388fd7e0d1d99d}{\index{dequeue.\-c@{dequeue.\-c}!x\-\_\-enqueue@{x\-\_\-enqueue}}
+\index{x\-\_\-enqueue@{x\-\_\-enqueue}!dequeue.c@{dequeue.\-c}}
+\subsubsection[{x\-\_\-enqueue}]{\setlength{\rightskip}{0pt plus 5cm}void x\-\_\-enqueue (
+\begin{DoxyParamCaption}
+\item[{struct Dequeue $\ast$}]{queue, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{dequeue_8c_a20ccade5d268a87a98388fd7e0d1d99d}
+
+
+enqueues data into the queue \par
+ {\bfseries  Precondition \-: The queue should have been initialized} \par
+ {\bfseries  Postcondition \-: The data is added into the queue} \par
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue to which data is being added \\
+\hline
+{\em data} & The data which is being added to the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file dequeue.\-c.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{dequeue__impl_8h_a984ea7bc3235a75f2dd887482b866726}{q\_enqueue}(queue->queue,data,queue->size\_of\_data);
+\}
+\end{DoxyCode}

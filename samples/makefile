@@ -1,4 +1,4 @@
-build: encoder decoder big_integer_comparator
+build: encoder decoder big_integer_comparator dequeue_impl_sample
 	echo "compiled all"
 
 encoder:
@@ -12,3 +12,7 @@ decoder:
 big_integer_comparator:
 	cc big_integer_comparator.c ../lib/big_integer_impl.o ../lib/big_integer.o -I../include -o ../big_integer_comparator
 	echo "compiled big integer comparator"
+
+dequeue_impl_sample:
+	cc dequeue_impl_sample.c ../lib/dequeue.o ../lib/dequeue_impl.o ../lib/big_integer.o ../lib/big_integer_impl.o  -I../include -I../include/collections -o ../dequeue_impl_sample
+	echo "compiled dequeue implementation sample"

@@ -1,5 +1,5 @@
-\hypertarget{big__integer__impl_8c}{\section{/\-Users/sidharthamani/huffman\-\_\-coder/src/big\-\_\-integer\-\_\-impl.c File Reference}
-\label{big__integer__impl_8c}\index{/\-Users/sidharthamani/huffman\-\_\-coder/src/big\-\_\-integer\-\_\-impl.\-c@{/\-Users/sidharthamani/huffman\-\_\-coder/src/big\-\_\-integer\-\_\-impl.\-c}}
+\hypertarget{big__integer__impl_8c}{\section{/\-Users/sidharthamani/\-Crumbler/src/big\-\_\-integer\-\_\-impl.c File Reference}
+\label{big__integer__impl_8c}\index{/\-Users/sidharthamani/\-Crumbler/src/big\-\_\-integer\-\_\-impl.\-c@{/\-Users/sidharthamani/\-Crumbler/src/big\-\_\-integer\-\_\-impl.\-c}}
 }
 
 
@@ -11,6 +11,13 @@ The implementation of \hyperlink{big__integer__impl_8h_structbig__integer}{big\-
 
 
 {\ttfamily \#include \char`\"{}big\-\_\-integer\-\_\-impl.\-h\char`\"{}}\\*
+Include dependency graph for big\-\_\-integer\-\_\-impl.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{big__integer__impl_8c__incl}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,8 +47,8 @@ char $\ast$ \hyperlink{big__integer__impl_8c_ac9b89d7643e2d33ff43b6b19cf8e626c}{
  {\bfseries  Precondition\-: } the variable capturing the returned value should not have already been allocated memory \par
  {\bfseries  Postcondition\-: } memory is allocated and initialized before returning to the calling environment \end{DoxyCompactList}\item 
 int \hyperlink{big__integer__impl_8c_a12e0894b8887892194604e1217fe2afd}{compare\-\_\-big\-\_\-integers} (struct \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} $\ast$operand1, struct \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} $\ast$operand2)
-\begin{DoxyCompactList}\small\item\em compares two positive integers only \par
- {\bfseries  Precondition\-: } the numbers being compared should both be positive \par
+\begin{DoxyCompactList}\small\item\em compares any two big\-\_\-integer(s) \par
+ {\bfseries  Precondition\-: } the numbers being compared should have their signs set to 1 or -\/1\par
  {\bfseries  Postcondition\-: }The comparison result is returned \end{DoxyCompactList}\item 
 void \hyperlink{big__integer__impl_8c_aba3732c4704a6c73493683133fcd9cae}{destroy\-\_\-big\-\_\-integer} (\hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-integer} $\ast$obj)
 \begin{DoxyCompactList}\small\item\em frees the allocated memory \par
@@ -92,7 +99,7 @@ a pointer to the \hyperlink{big__integer__impl_8h_structbig__integer}{big\-\_\-i
 \end{DoxyReturn}
 
 
-Definition at line 171 of file big\-\_\-integer\-\_\-impl.\-c.
+Definition at line 184 of file big\-\_\-integer\-\_\-impl.\-c.
 
 
 \begin{DoxyCode}
@@ -154,8 +161,8 @@ Definition at line 171 of file big\-\_\-integer\-\_\-impl.\-c.
 )}}\label{big__integer__impl_8c_a12e0894b8887892194604e1217fe2afd}
 
 
-compares two positive integers only \par
- {\bfseries  Precondition\-: } the numbers being compared should both be positive \par
+compares any two big\-\_\-integer(s) \par
+ {\bfseries  Precondition\-: } the numbers being compared should have their signs set to 1 or -\/1\par
  {\bfseries  Postcondition\-: }The comparison result is returned 
 
 
@@ -173,17 +180,30 @@ compares two positive integers only \par
 \end{DoxyReturn}
 
 
-Definition at line 141 of file big\-\_\-integer\-\_\-impl.\-c.
+Definition at line 142 of file big\-\_\-integer\-\_\-impl.\-c.
 
 
 \begin{DoxyCode}
 \{
-    \textcolor{keywordflow}{if}(strlen(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value}) != strlen(operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value}))
+    \textcolor{keywordflow}{if} (operand1->\hyperlink{big__integer__impl_8h_abbeb8ae63622a7fef0b5a56bb91a1682}{sign} == 1 && operand2->\hyperlink{big__integer__impl_8h_abbeb8ae63622a7fef0b5a56bb91a1682}{sign} == 1) 
     \{
-        \textcolor{keywordflow}{return} (strlen(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value})>strlen(operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value})?1:-1)
-      ;
+        \textcolor{keywordflow}{if}(strlen(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value}) != strlen(operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value}))
+        \{
+            \textcolor{keywordflow}{return} (strlen(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value})>strlen(operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value})?1
+      :-1);
+        \}
+        \textcolor{keywordflow}{return} strcmp(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value},operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value});
     \}
-    \textcolor{keywordflow}{return} strcmp(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value},operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value});
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(operand1->\hyperlink{big__integer__impl_8h_abbeb8ae63622a7fef0b5a56bb91a1682}{sign} == -1 && operand2->\hyperlink{big__integer__impl_8h_abbeb8ae63622a7fef0b5a56bb91a1682}{sign} == -1)
+    \{
+        \textcolor{keywordflow}{if}(strlen(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value}) != strlen(operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value}))
+        \{
+            \textcolor{keywordflow}{return} (strlen(operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value})>strlen(operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value})?-
+      1:1);
+        \}
+        \textcolor{keywordflow}{return} strcmp(operand2->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value},operand1->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value});
+    \}
+    \textcolor{keywordflow}{return} (operand1->\hyperlink{big__integer__impl_8h_abbeb8ae63622a7fef0b5a56bb91a1682}{sign} == 1)?1:-1;
 \}
 \end{DoxyCode}
 \hypertarget{big__integer__impl_8c_aba3732c4704a6c73493683133fcd9cae}{\index{big\-\_\-integer\-\_\-impl.\-c@{big\-\_\-integer\-\_\-impl.\-c}!destroy\-\_\-big\-\_\-integer@{destroy\-\_\-big\-\_\-integer}}
@@ -209,7 +229,7 @@ Nothing
 \end{DoxyReturn}
 
 
-Definition at line 157 of file big\-\_\-integer\-\_\-impl.\-c.
+Definition at line 170 of file big\-\_\-integer\-\_\-impl.\-c.
 
 
 \begin{DoxyCode}
@@ -244,6 +264,7 @@ Definition at line 60 of file big\-\_\-integer\-\_\-impl.\-c.
     \textcolor{keyword}{struct }\hyperlink{big__integer__impl_8h_structbig__integer}{big\_integer} *temp = (\textcolor{keyword}{struct }\hyperlink{big__integer__impl_8h_structbig__integer}{big\_integer}*)
       malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \hyperlink{big__integer__impl_8h_structbig__integer}{big\_integer}));
     temp->\hyperlink{big__integer__impl_8h_a4e9aec275e566b978a3ccb4e043d8c61}{value} = NULL;
+    temp->\hyperlink{big__integer__impl_8h_abbeb8ae63622a7fef0b5a56bb91a1682}{sign} = 1;
     \textcolor{keywordflow}{return} temp;
 \}
 \end{DoxyCode}
@@ -270,7 +291,7 @@ a pointer to the allocated and initialized memory
 \end{DoxyReturn}
 
 
-Definition at line 104 of file big\-\_\-integer\-\_\-impl.\-c.
+Definition at line 105 of file big\-\_\-integer\-\_\-impl.\-c.
 
 
 \begin{DoxyCode}
@@ -324,7 +345,7 @@ a pointer to the allocated and initialized memory
 \end{DoxyReturn}
 
 
-Definition at line 91 of file big\-\_\-integer\-\_\-impl.\-c.
+Definition at line 92 of file big\-\_\-integer\-\_\-impl.\-c.
 
 
 \begin{DoxyCode}
@@ -356,7 +377,7 @@ a pointer to the allocated and initialized memory
 \end{DoxyReturn}
 
 
-Definition at line 75 of file big\-\_\-integer\-\_\-impl.\-c.
+Definition at line 76 of file big\-\_\-integer\-\_\-impl.\-c.
 
 
 \begin{DoxyCode}
